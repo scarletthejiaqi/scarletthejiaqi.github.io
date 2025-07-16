@@ -387,6 +387,38 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
+.project-card-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.image-container-centered {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px auto;
+}
+
+.project-title-centered {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.btn-container-centered {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
 /* CONTACT */
 
 #contact {
