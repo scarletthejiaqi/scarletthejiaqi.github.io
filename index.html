@@ -36,14 +36,9 @@
             </div>
         </div>
     </nav>
-    <script src="script.js"></script>
-    <style>
-      #profile {
-        margin-top: 40px; /* or any value you prefer */
-      }
-    </style>
     
     <section id="profile">
+      <div class="profile-top-container">
         <div class="section_pic-container">
             <img 
             src="assets/profile.jpg" 
@@ -78,36 +73,117 @@
                   class="icon"
                   onclick="location.href='https://github.com/scarletthejiaqi'"
                 />
-              </div>
+             </div>
         </div>
+      </div>
+      
+      <!-- index.html -->
+
+<!-- NEW Three-Column Education Box -->
+<div class="details-container education-section-container">
+    <div class="education-layout-container">
+        
+        <!-- Column 1: Left Coursework List -->
+        <div class="education-column">
+            <h4>Statistics Coursework</h4>
+            <ul>
+                <li>Modern Methods in Applied Statistics(M.S. Course)</li>
+                <li>Statistical Modeling</li>
+                <li>Time Series Analysis</li>
+                <li>Bayesian Statistics</li>
+            </ul>
+        </div>
+        
+        <!-- Column 2: Center (Original Content) -->
+        <div class="education-column education-center-column">
+            <!-- <img
+              src="./assets/education.png"
+              alt="Education icon"
+              class="icon"
+            /> -->
+            <h3>Education</h3>
+
+            <div class="school-entry">
+                <p><strong>University of Illinois at Urbana-Champaign</strong></p>
+                <p>B.Sc. Statistics & Computer Science</p>
+                <p>Aug. 2022 - May. 2024</p>
+            </div>
+
+
+            <div class="school-entry">
+                <p><strong>University of Chicago</strong></p>
+                <p>B.Sc. Statistics</p>
+                <p>Sep. 2024 - Dec. 2026</p>
+            </div>
+        </div>
+
+        <!-- Column 3: Right Coursework List -->
+        <div class="education-column">
+            <h4>Computer Science Coursework</h4>
+            <ul>
+                <li>Machine Learning</li>
+                <li>Natural Language Processing</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Systems Programming</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
     </section>
+
     <section id="about">
         <p class="section__text__p1">Get To Know More</p>
         <h1 class="title">About Me</h1>
         <div class="section-container">
           <div class="about-details-container">
             <div class="about-containers">
-              <div class="details-container">
-                <img
-                  src="./assets/education.png"
-                  alt="Education icon"
-                  class="icon"
-                />
-                <h3>Education</h3>
-                <p>B.Sc. Statistics<br />University of Chicago</p>
+              <!-- Personal Photo Gallery -->
+              <div class="photo-gallery">
+                  <div class="photo-item">
+                      <img src="assets/photo1.png" alt="Personal photo 1">
+                  </div>
+                  <div class="photo-item">
+                      <img src="assets/photo2.png" alt="Personal photo 2">
+                  </div>
+                  <div class="photo-item">
+                      <img src="assets/photo3.png" alt="Personal photo 3">
+                  </div>
+                  <div class="photo-item">
+                      <img src="assets/photo4.png" alt="Personal photo 4">
+                  </div>
+                  <div class="photo-item">
+                      <img src="assets/photo5.png" alt="Personal photo 5">
+                  </div>
+                  <div class="photo-item">
+                      <img src="assets/photo6.png" alt="Personal photo 6">
+                  </div>
+                  <div class="photo-item">
+                      <img src="assets/photo7.png" alt="Personal photo 7">
+                  </div>
+                  <div class="photo-item">
+                      <img src="assets/photo8.png" alt="Personal photo 8">
+                  </div>
               </div>
             </div>
             <div class="text-container">
               <p>
-                With a strong foundation in Statistics and Computer Science, 
-                I am passionate about uncovering insights through data. 
-                As a junior at the University of Chicago, 
+                I'm a data enthusiast with a sharp eye for patterns and a soft spot for pink(obvious right?). 
+                As a junior at the University of Chicago studying Statistics, I spend my weekdays exploring datasets📊,
+                and my weekends experimenting with new recipes in cooking 🍳 and baking 🍰.
               </p>
               <p>
-                I have honed my skills through coursework and hands-on projects, 
-                gaining valuable experience in data analysis, interpretation, and the ETL process.
+                I love building pipelines that give messy data meanings.
+                The experience that I enjoy the most is using machine learning models to create predictions while binge eating Reese's peanut butter cups. 
+                I’m driven by curiosity and a need to figure things out (and chocolates🍫). 
+                Fun fact: I once tracked the number of peanut butter cups I ate each week for two months and tried to predict my consumption for the following two weeks.
+                Unfortunately, I ended up eating 200% more than the model predicted, mostly because it's finals week 🥲.
+
+              </p>
               <p>
-                I am driven to explore new opportunities in the data science field, where I can apply my analytical skills and technical knowledge to solve complex problems. I look forward to leveraging my experience and continuing to grow in this dynamic field.
+                I’m looking to bring my analytical skills, technical training, and creative mindset into the data science world—somewhere I can keep learning
+                , keep building, and maybe even bring baked goods to the office.
               </p>
             </div>
           </div>
@@ -331,7 +407,7 @@
           <div class="nav-links-container">
             <ul class="nav-links">
               <li><a href="#about">About</a></li>
-              <li><a href="#experience">Experience</a></li>
+              <li><a href="#experience">Skills</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>

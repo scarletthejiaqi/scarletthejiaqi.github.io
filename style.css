@@ -15,6 +15,7 @@ body {
 
 html {
     scroll-behavior:smooth;
+    font-size: 105%;
 }
 
 p {
@@ -149,7 +150,7 @@ a:hover {
 section {
   padding-top: 4vh;
   height: 96vh;
-  margin: 0 10rem;
+  margin: 5rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -160,11 +161,28 @@ section {
 
 /* PROFILE SECTION */
 
-#profile {
+/* #profile {
   display: flex;
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+} */
+
+#profile {
+  display: flex;
+  flex-direction: column; /* This stacks the items vertically */
+  justify-content: center;
+  align-items: stretch; /* This centers the items horizontally */
+  gap: 2rem; /* This adds space between the top row and the education box */
+  height: 80vh;
+  margin-top: 40px;
+}
+
+.profile-top-container {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .section__pic-container {
@@ -202,6 +220,77 @@ section {
   justify-content: center;
   margin-top: 1rem;
   gap: 1rem;
+}
+
+
+/* --- Education Section - Three Column Layout --- */
+
+/* Style for the main education container to make it wider */
+.education-section-container {
+    width: 100%; /* Make the box take up more horizontal space */
+}
+
+/* Flex container for the three columns */
+.education-layout-container {
+  display: flex;
+  justify-content: space-between; /* Spreads columns out */
+  align-items: flex-start; /* Aligns columns to the top */
+  gap: 0.5rem; /* Space between columns */
+  width: 100%;
+}
+
+/* Styling for each column */
+.education-column {
+  flex: 1; /* Allows columns to share space equally */
+  text-align: center; /* Align coursework text to the center for readability */
+}
+
+/* Special styling for the center column */
+.education-column.education-center-column {
+  text-align: center;
+  flex-shrink: 0; /* Prevents the center column from shrinking too much */
+}
+
+/* Styling for the "Relevant Coursework" titles */
+.education-column h4 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  /* color: rgb(85, 85, 85); Matches other paragraph text color */
+}
+
+/* Styling for the class lists */
+.education-column ul {
+  list-style-type: none; /* Removes the bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for each class list item */
+.education-column li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: rgb(85, 85, 85); /* Matches other paragraph text color */
+}
+
+/* style.css */
+
+/* --- Custom Spacing for Education Section --- */
+
+/* 1. Adds space between "Education" title and the first school */
+.school-list-container {
+  margin-top: 1rem; /* Adjust this value as needed */
+}
+
+/* 2. Adds a small space between the two school entries */
+.school-entry:not(:last-child) {
+  margin-bottom: 0.8rem; /* This is less than a full line break. Adjust as needed. */
+}
+
+/* Bonus: Removes default paragraph spacing inside our new structure */
+.school-entry p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4; /* Improves readability */
 }
 
 /* ICONS */
@@ -259,6 +348,71 @@ section {
   gap: 1rem;
 }
 
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+/* Personal Photo Gallery */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    overflow-x: auto;
+    margin-top: 0px;
+    padding: 0px;
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    flex: 0 0 auto;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .photo-item img {
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 10px;
+    }
+    
+    .photo-item img {
+        height: 100px;
+    }
+}
+
+
 /* ABOUT SECTION */
 
 #about {
@@ -267,14 +421,15 @@ section {
 
 .about-containers {
   gap: 0.2rem;
-  margin-bottom: 2rem;
-  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .about-details-container {
   justify-content: center;
   flex-direction: column;
   margin-top: 0rem;
+  text-align: center;
 }
 
 .about-containers,
@@ -287,27 +442,24 @@ section {
   border-radius: 2rem;
 }
 
-.arrow {
+/* .arrow {
   position: absolute;
   right: -5rem;
   bottom: 2.5rem;
-}
+} */
 
 .details-container {
   margin-top: 0;
-  padding: 1.5rem;
-  flex: 1;
+  padding: 1rem;
+  /* flex: 1; */
   background: #f6d4d4;
-  border-radius: 2rem;
+  border-radius:2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  /* margin-bottom: 0rem; */
 }
 
-.section-container {
-  margin-top: 0rem;
-
-}
 
 .section__pic-container {
   height: 400px;
@@ -319,6 +471,11 @@ section {
 .text-container p {
   text-indent: 1.5em; /* You can use px, em, or rem. 2em is about two "tab" spaces */
   /* color: #000080; */
+}
+
+.text-container {
+  text-align: left;
+  font-size: 1.2rem;
 }
 
 /* EXPERIENCE SECTION */
@@ -342,7 +499,7 @@ section {
 
 .article-container {
   display: flex;
-  text-align: initial;
+  text-align: center;
   flex-wrap: wrap;
   flex-direction: row;
   gap: 1rem;
@@ -352,12 +509,15 @@ section {
 article {
   display: flex;
   width: 10rem;
-  justify-content: flex_start;
+  justify-content: center; /* Center the article block */
   align-items: center;      /* Vertically center icon and text */
   gap: 1rem;                /* Space between icon and text */
   width: 100%;              /*Make all articles the same width */
   margin-bottom: 0.5rem;    /* Adjust vertical spacing between articles */
+  text-align: center;       /* This centers the text (h3, p) inside the block */
 }
+
+
 
 article .icon {
   cursor: default;
