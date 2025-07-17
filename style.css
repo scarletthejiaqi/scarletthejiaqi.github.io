@@ -101,11 +101,12 @@ a:hover {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: antiquewhite;
+    background-color: #f6d4d4;
     width: fit-content;
     max-height: 0;
     overflow: hidden;
     transition: all 0.3 ease-in-out;
+    z-index: 1001;
 }
 
 .menu-links a {
@@ -172,7 +173,7 @@ section {
   display: flex;
   flex-direction: column; /* This stacks the items vertically */
   justify-content: center;
-  align-items: stretch; /* This centers the items horizontally */
+  align-items: center; /* This centers the items horizontally */
   gap: 2rem; /* This adds space between the top row and the education box */
   height: 80vh;
   margin-top: 40px;
