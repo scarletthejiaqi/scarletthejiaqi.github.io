@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
+  <div id="vanta-bg"></div>
     <nav id="desktop-nav">
         <div class="logo">Scarlett He</div>
         <div>
@@ -338,5 +339,35 @@
         </nav>
       </footer>
       <script src="script.js"></script>  
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+
+      <script>
+VANTA.HALO({
+  el: "#vanta-bg",
+  amplitudeFactor: 3,
+  backgroundAlpha: 1,
+  backgroundColor: 0xFFC0CB,    // replace with your desired background color
+  baseColor: 0x1a59,
+  color2: 0xF2EAD5,
+  gyroControls: false,
+  minHeight: 200,
+  minWidth: 200,
+  mouseControls: false,
+  mouseEase: false,
+  ringFactor: 1,
+  rotationFactor: 1,
+  scale: 1,
+  scaleMobile: 1,
+  size: 3,
+  speed: 1,
+  touchControls: false,
+  xOffset: -0.01,
+  yOffset: 0
+});
+</script>
+
+
 </body>
 </html>
