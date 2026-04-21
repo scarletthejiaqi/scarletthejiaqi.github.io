@@ -1,460 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-      gtag('config',  'G-R8S72LMX4G');
-    </script>
+    gtag('config', 'G-R8S72LMX4G');
+  </script>
 
 </head>
+
 <body>
   <div id="vanta-bg"></div>
-    <nav id="desktop-nav">
-        <div class="logo">Scarlett He</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+  <nav id="desktop-nav">
+    <div class="logo">Scarlett He</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Scarlett He</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <section id="profile">
+    <div class="profile-top-container">
+      <div class="section_pic-container">
+        <img src="assets/profile.jpg" width="400px" height="300px" alt="Scarlett profile picture" />
+      </div>
+      <div class="section_text">
+        <style>
+          .btn-container {
+            margin-top: 15px;
+            /* adjust value as needed */
+          }
+        </style>
+        <p class="section_text_p1">Hello, I'm</p>
+        <h1 class="title">Scarlett He</h1>
+        <p class="section_text_p2">Data enthusiast | Python, SQL, R, PowerBI | Stats@Uchicago </p>
+        <div class="btn-container">
+          <button class="btn btn-color-2"
+            onclick="window.open('https://drive.google.com/file/d/1ZShLhfZJZL_-_Fawm_cjPgQS27HY20Ds/view?usp=sharing')">
+            Resume
+          </button>
         </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Scarlett He</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
-        </div>
-    </nav>
-    
-    <section id="profile">
-      <div class="profile-top-container">
-        <div class="section_pic-container">
-            <img 
-            src="assets/profile.jpg" 
-            width="400px"
-            height="300px"
-            alt="Scarlett profile picture"/>
-        </div>
-        <div class="section_text">
-            <style>
-                .btn-container {
-                    margin-top: 15px; /* adjust value as needed */
-                }
-            </style>
-            <p class="section_text_p1">Hello, I'm</p>
-            <h1 class="title">Scarlett He</h1>
-            <p class="section_text_p2">Data enthusiast | Python, SQL, R, PowerBI | Stats@Uchicago </p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('https://docs.google.com/document/d/1WnksdYCoZly2lgQXNTiWFZ0uSNHkKyUdSKfFhdxPN90/edit?usp=sharing')">
-                    Resume
-                </button>
-            </div>
-            <div id="socials-container">
-                <img
-                  src="./assets/linkedin.png"
-                  alt="My LinkedIn profile"
-                  class="icon"
-                  onclick="location.href='https://www.linkedin.com/in/jiaqihe-stats/.com'"
-                />
-                <img
-                  src="./assets/github.png"
-                  alt="My Github profile"
-                  class="icon"
-                  onclick="location.href='https://github.com/scarletthejiaqi'"
-                />
-             </div>
+        <div id="socials-container">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+            onclick="location.href='https://www.linkedin.com/in/jiaqihe-stats/.com'" />
+          <img src="./assets/github.png" alt="My Github profile" class="icon"
+            onclick="location.href='https://github.com/scarletthejiaqi'" />
         </div>
       </div>
-      
-      <!-- index.html -->
+    </div>
 
-<!-- NEW Three-Column Education Box -->
-<div class="details-container education-section-container">
-    <div class="education-layout-container">
-        
+    <!-- index.html -->
+
+    <!-- NEW Three-Column Education Box -->
+    <div class="details-container education-section-container">
+      <div class="education-layout-container">
+
         <!-- Column 1: Left Coursework List -->
         <div class="education-column">
-            <h4>Statistics Coursework</h4>
-            <ul>
-                <li>Modern Methods in Applied Statistics(M.S. Course)</li>
-                <li>Statistical Modeling</li>
-                <li>Time Series Analysis</li>
-                <li>Bayesian Statistics</li>
-            </ul>
+          <h4>Statistics Coursework</h4>
+          <ul>
+            <li>Modern Methods in Applied Statistics(M.S. Course)</li>
+            <li>Statistical Modeling</li>
+            <li>Time Series Analysis</li>
+            <li>Bayesian Statistics</li>
+          </ul>
         </div>
-        
+
         <!-- Column 2: Center (Original Content) -->
         <div class="education-column education-center-column">
-            <!-- <img
+          <!-- <img
               src="./assets/education.png"
               alt="Education icon"
               class="icon"
             /> -->
-            <h3>Education</h3>
+          <h3>Education</h3>
 
-            <div class="school-entry">
-                <p><strong>University of Illinois at Urbana-Champaign</strong></p>
-                <p>B.Sc. Statistics & Computer Science</p>
-                <p>Aug. 2022 - May. 2024</p>
-            </div>
+          <div class="school-entry">
+            <p><strong>University of Illinois at Urbana-Champaign</strong></p>
+            <p>B.Sc. Statistics & Computer Science</p>
+            <p>Aug. 2022 - May. 2024</p>
+          </div>
 
 
-            <div class="school-entry">
-                <p><strong>University of Chicago</strong></p>
-                <p>B.Sc. Statistics</p>
-                <p>Sep. 2024 - Dec. 2026</p>
-            </div>
+          <div class="school-entry">
+            <p><strong>University of Chicago</strong></p>
+            <p>B.Sc. Statistics</p>
+            <p>Sep. 2024 - Dec. 2026</p>
+          </div>
         </div>
 
         <!-- Column 3: Right Coursework List -->
         <div class="education-column">
-            <h4>Computer Science Coursework</h4>
-            <ul>
-                <li>Machine Learning</li>
-                <li>Natural Language Processing</li>
-                <li>Data Structures and Algorithms</li>
-                <li>Systems Programming</li>
-            </ul>
+          <h4>Computer Science Coursework</h4>
+          <ul>
+            <li>Machine Learning</li>
+            <li>Natural Language Processing</li>
+            <li>Data Structures and Algorithms</li>
+            <li>Systems Programming</li>
+          </ul>
         </div>
 
+      </div>
     </div>
-</div>
 
-    </section>
+  </section>
 
-    <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-          <div class="about-details-container">
-            <div class="about-containers">
-              <!-- Personal Photo Gallery -->
-              <div class="photo-gallery">
-                  <div class="photo-item">
-                      <img src="assets/photo1.png" alt="Personal photo 1">
-                  </div>
-                  <div class="photo-item">
-                      <img src="assets/photo3.png" alt="Personal photo 2">
-                  </div>
-                  <div class="photo-item">
-                      <img src="assets/photo5.png" alt="Personal photo 3">
-                  </div>
-                  <div class="photo-item">
-                      <img src="assets/photo7.png" alt="Personal photo 4">
-                  </div>
-                  <div class="photo-item">
-                      <img src="assets/photo2.png" alt="Personal photo 5">
-                  </div>
-                  <div class="photo-item">
-                      <img src="assets/photo6.png" alt="Personal photo 6">
-                  </div>
-                  <div class="photo-item">
-                      <img src="assets/photo4.png" alt="Personal photo 7">
-                  </div>
-                  <div class="photo-item">
-                      <img src="assets/photo8.png" alt="Personal photo 8">
-                  </div>
-              </div>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="about-details-container">
+        <div class="about-containers">
+          <!-- Personal Photo Gallery -->
+          <div class="photo-gallery">
+            <div class="photo-item">
+              <img src="assets/photo1.png" alt="Personal photo 1">
             </div>
-            <div class="text-container">
-              <p>
-                I'm a data enthusiast with a sharp eye for patterns and a soft spot for pink(obvious right?). 
-                As a junior at the University of Chicago studying Statistics, I spend my weekdays exploring datasets📊,
-                and my weekends experimenting with new recipes in cooking 🍳 and baking 🍰.
-              </p>
-              <p>
-                I love building pipelines that give messy data meanings.
-                The experience that I enjoy the most is using machine learning models to create predictions while binge eating Reese's peanut butter cups. 
-                I’m driven by curiosity and a need to figure things out (and chocolates🍫). 
-                Fun fact: I once tracked the number of peanut butter cups I ate each week for two months and tried to predict my consumption for the following two weeks.
-                Unfortunately, I ended up eating 200% more than the model predicted, mostly because it was finals week 🥲.
-
-              </p>
-              <p>
-                I’m looking to bring my analytical skills, technical training, and creative mindset into the data science world—somewhere I can keep learning
-                , keep building, and maybe even bring baked goods to the office.
-              </p>
+            <div class="photo-item">
+              <img src="assets/photo3.png" alt="Personal photo 2">
+            </div>
+            <div class="photo-item">
+              <img src="assets/photo5.png" alt="Personal photo 3">
+            </div>
+            <div class="photo-item">
+              <img src="assets/photo7.png" alt="Personal photo 4">
+            </div>
+            <div class="photo-item">
+              <img src="assets/photo2.png" alt="Personal photo 5">
+            </div>
+            <div class="photo-item">
+              <img src="assets/photo6.png" alt="Personal photo 6">
+            </div>
+            <div class="photo-item">
+              <img src="assets/photo4.png" alt="Personal photo 7">
+            </div>
+            <div class="photo-item">
+              <img src="assets/photo8.png" alt="Personal photo 8">
             </div>
           </div>
         </div>
-        <a href="#experience">
-          <img
-            src="./assets/arrow.png"
-            alt="Arrow icon"
-            class="icon arrow"
-          />
-        </a>
-      </section>
+        <div class="text-container">
+          <p>
+            I'm a data enthusiast with a sharp eye for patterns and a soft spot for pink(obvious right?).
+            As a junior at the University of Chicago studying Statistics, I spend my weekdays exploring datasets📊,
+            and my weekends experimenting with new recipes in cooking 🍳 and baking 🍰.
+          </p>
+          <p>
+            I love building pipelines that give messy data meanings.
+            The experience that I enjoy the most is using machine learning models to create predictions while binge
+            eating Reese's peanut butter cups.
+            I’m driven by curiosity and a need to figure things out (and chocolates🍫).
+            Fun fact: I once tracked the number of peanut butter cups I ate each week for two months and tried to
+            predict my consumption for the following two weeks.
+            Unfortunately, I ended up eating 200% more than the model predicted, mostly because it was finals week 🥲.
 
-      <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Skills</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <h2 class="experience-sub-title">Data Scientist</h2>
-              <div class="article-container">
-                <article>
-                  <div>
-                    <h3>Python</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-
-                <article>
-                  <div>
-                    <h3>SQL</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-                
-                <article>
-                  <div>
-                    <h3>Data Wrangling</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-
-                <article>
-                  <div>
-                    <h3>Data Visualization</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-
-                <article>
-                  <div>
-                    <h3>Machine Learning</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-
-                <article>
-                  <div>
-                    <h3>Big Data Tools (Spark, Hadoop)</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-
-              </div>
-            </div>
-            <div class="details-container">
-              <h2 class="experience-sub-title">Data Engineer</h2>
-              <div class="article-container">
-                
-                <article>
-                  <div>
-                    <h3>Business Intelligence (Power BI, Tableau)</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-
-                <article>
-                  <div>
-                    <h3>Git</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-                
-                <article>
-                  <div>
-                    <h3>Cloud Platforms (AWS, Azure, GCP)</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-
-                <article>
-                  <div>
-                    <h3>Database Management</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-
-                <article>
-                  <div>
-                    <h3>ETL Processes</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-
-              </div>
-            </div>
-          </div>
+          </p>
+          <p>
+            I’m looking to bring my analytical skills, technical training, and creative mindset into the data science
+            world—somewhere I can keep learning
+            , keep building, and maybe even bring baked goods to the office.
+          </p>
         </div>
-        <a href="#projects">
-          <img
-            src="./assets/arrow.png"
-            alt="Arrow icon"
-            class="icon arrow"
-          />
-        </a>
-      </section>
-      <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
+      </div>
+    </div>
+    <a href="#experience">
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" />
+    </a>
+  </section>
 
-            <div class="details-container color-container project-card-centered">
-              <div class="article-container image-container-centered">
-                <img
-                  src="./assets/project-1.png"
-                  alt="Project 1"
-                  class="project-img"
-                  style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
-                />
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Skills</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Data Scientist</h2>
+          <div class="article-container">
+            <article>
+              <div>
+                <h3>Python</h3>
+                <p>Experienced</p>
               </div>
-              <h2 class="experience-sub-title project-title project-title-centered">Human Reaction Time Analysis</h2>
-              <div class="btn-container btn-container-centered">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/scarletthejiaqi/Reaction-Time-Analysis'"
-                >
-                  Github
-                </button>
-              </div>
-            </div>
-            
-            <div class="details-container color-container project-card-centered">
-              <div class="article-container image-container-centered">
-                <img
-                  src="./assets/project-2.png"
-                  alt="Project 2"
-                  class="project-img"
-                  style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title project-title-centered">Interactive Voice Response System Solutions</h2>
-              <div class="btn-container btn-container-centered">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/scarletthejiaqi/IVR-System-Solutions'"
-                >
-                  Github
-                </button>
-              </div>
-            </div>
+            </article>
 
-            
-            <div class="details-container color-container project-card-centered">
-              <div class="article-container image-container-centered">
-                <img
-                  src="./assets/project-3.png"
-                  alt="Project 3"
-                  class="project-img"
-                  style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
-                />
+            <article>
+              <div>
+                <h3>SQL</h3>
+                <p>Experienced</p>
               </div>
-              <h2 class="experience-sub-title project-title project-title-centered">Salary Disparity between Job Titles</h2>
-              <div class="btn-container btn-container-centered">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/scarletthejiaqi/Salary-Disparity-between-Job-Titiles'"
-                >
-                  Github
-                </button>
+            </article>
+
+            <article>
+              <div>
+                <h3>Data Wrangling</h3>
+                <p>Experienced</p>
               </div>
-            </div>
+            </article>
 
+            <article>
+              <div>
+                <h3>Data Visualization</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
 
+            <article>
+              <div>
+                <h3>Machine Learning</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
 
+            <article>
+              <div>
+                <h3>Big Data Tools (Spark, Hadoop)</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
 
           </div>
         </div>
-        <a href="#contact">
-          <img
-            src="./assets/arrow.png"
-            alt="Arrow icon"
-            class="icon arrow"
-          />
-        </a>
-      </section>
-      <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-          <div class="contact-info-container">
-            <img
-              src="./assets/email.png"
-              alt="Email icon"
-              class="icon contact-icon email-icon"
-            />
-            <p><a href="mailto:scarlett_hjq@outlook.com">scarlett_hjq@outlook.com</a></p>
-          </div>
-          <div class="contact-info-container">
-            <img
-              src="./assets/linkedin.png"
-              alt="LinkedIn icon"
-              class="icon contact-icon"
-            />
-            <p><a href="https://www.linkedin.com/in/jiaqihe-stats">LinkedIn</a></p>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Data Engineer</h2>
+          <div class="article-container">
+
+            <article>
+              <div>
+                <h3>Business Intelligence (Power BI, Tableau)</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+
+            <article>
+              <div>
+                <h3>Git</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+
+            <article>
+              <div>
+                <h3>Cloud Platforms (AWS, Azure, GCP)</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+
+            <article>
+              <div>
+                <h3>Database Management</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+
+            <article>
+              <div>
+                <h3>ETL Processes</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+
           </div>
         </div>
-      </section>
-      <footer>
-        <nav>
-          <div class="nav-links-container">
-            <ul class="nav-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#experience">Skills</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
+      </div>
+    </div>
+    <a href="#projects">
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" />
+    </a>
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+
+        <div class="details-container color-container project-card-centered">
+          <div class="article-container image-container-centered">
+            <img src="./assets/project-1.png" alt="Project 1" class="project-img"
+              style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
           </div>
-        </nav>
-      </footer>
-      <script src="script.js"></script>  
+          <h2 class="experience-sub-title project-title project-title-centered">Human Reaction Time Analysis</h2>
+          <div class="btn-container btn-container-centered">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/scarletthejiaqi/Reaction-Time-Analysis'">
+              Github
+            </button>
+          </div>
+        </div>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+        <div class="details-container color-container project-card-centered">
+          <div class="article-container image-container-centered">
+            <img src="./assets/project-2.png" alt="Project 2" class="project-img"
+              style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
+          </div>
+          <h2 class="experience-sub-title project-title project-title-centered">Interactive Voice Response System
+            Solutions</h2>
+          <div class="btn-container btn-container-centered">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/scarletthejiaqi/IVR-System-Solutions'">
+              Github
+            </button>
+          </div>
+        </div>
 
-      <script>
-VANTA.HALO({
-  el: "#vanta-bg",
-  amplitudeFactor: 3,
-  backgroundAlpha: 1,
-  backgroundColor: 0xFFC0CB,    // replace with your desired background color
-  baseColor: 0x1a59,
-  color2: 0xF2EAD5,
-  gyroControls: false,
-  minHeight: 200,
-  minWidth: 200,
-  mouseControls: false,
-  mouseEase: false,
-  ringFactor: 1,
-  rotationFactor: 1,
-  scale: 1,
-  scaleMobile: 1,
-  size: 3,
-  speed: 1,
-  touchControls: false,
-  xOffset: -0.01,
-  yOffset: 0
-});
-</script>
+
+        <div class="details-container color-container project-card-centered">
+          <div class="article-container image-container-centered">
+            <img src="./assets/project-3.png" alt="Project 3" class="project-img"
+              style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
+          </div>
+          <h2 class="experience-sub-title project-title project-title-centered">Salary Disparity between Job Titles</h2>
+          <div class="btn-container btn-container-centered">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/scarletthejiaqi/Salary-Disparity-between-Job-Titiles'">
+              Github
+            </button>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+    <a href="#contact">
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" />
+    </a>
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:scarlett_hjq@outlook.com">scarlett_hjq@outlook.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/jiaqihe-stats">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+  <script src="script.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+
+  <script>
+    VANTA.HALO({
+      el: "#vanta-bg",
+      amplitudeFactor: 3,
+      backgroundAlpha: 1,
+      backgroundColor: 0xFFC0CB,    // replace with your desired background color
+      baseColor: 0x1a59,
+      color2: 0xF2EAD5,
+      gyroControls: false,
+      minHeight: 200,
+      minWidth: 200,
+      mouseControls: false,
+      mouseEase: false,
+      ringFactor: 1,
+      rotationFactor: 1,
+      scale: 1,
+      scaleMobile: 1,
+      size: 3,
+      speed: 1,
+      touchControls: false,
+      xOffset: -0.01,
+      yOffset: 0
+    });
+  </script>
 
 
 </body>
+
 </html>
