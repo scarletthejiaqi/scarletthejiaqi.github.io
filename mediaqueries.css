@@ -105,6 +105,24 @@
     #profile {
       height: fit-content;
       margin-bottom: 0;
+      padding-top: 1rem;
+    }
+    .profile-top-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .section__text {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+    .section__text p,
+    .section__text h1,
+    .section__text__p1,
+    .section__text__p2 {
+      color: rgb(40, 40, 40);
     }
     article {
       font-size: 1rem;
@@ -137,15 +155,16 @@
       text-align: center;
     }
     .section__pic-container {
-      width: 46vw;
-      height: 46vw;
+      width: 60vw;
+      height: 60vw;
       justify-content: center;
     }
     .section__text__p2 {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
     }
     .title {
-      font-size: 2rem;
+      font-size: 2.2rem;
+      color: rgb(30, 30, 30);
     }
     .text-container {
       text-align: justify;
