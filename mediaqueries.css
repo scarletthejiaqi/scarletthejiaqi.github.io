@@ -47,6 +47,57 @@
     }
   }
   
+  /* Vertical timeline on small screens */
+  @media screen and (max-width: 768px) {
+    .timeline-track {
+      display: none;
+    }
+    .timeline-items {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .timeline-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .timeline-label {
+      min-height: unset;
+      flex-direction: row;
+      gap: 0.5rem;
+      align-items: baseline;
+      padding-bottom: 0.4rem;
+    }
+    .tl-date {
+      font-size: 0.7rem;
+    }
+    .tl-company {
+      font-size: 0.9rem;
+    }
+    .timeline-dot {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+    .popup-space {
+      height: auto;
+      width: 100%;
+    }
+    .timeline-popup,
+    .timeline-popup.popup-align-right {
+      position: static;
+      opacity: 1;
+      pointer-events: auto;
+      transform: none !important;
+      width: 100%;
+      box-shadow: none;
+      top: auto;
+      left: auto;
+      right: auto;
+    }
+    .timeline-hint {
+      display: none;
+    }
+  }
+
   @media screen and (max-width: 600px) {
     #contact,
     footer {

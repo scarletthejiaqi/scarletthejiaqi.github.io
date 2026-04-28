@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Scarlett He</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mediaqueries.css">
 
@@ -27,7 +27,7 @@
     <div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#experience">Skills</a></li>
+        <li><a href="#work-experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -43,7 +43,7 @@
       </div>
       <div class="menu-links">
         <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="#work-experience" onclick="toggleMenu()">Experience</a></li>
         <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
         <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
       </div>
@@ -52,20 +52,12 @@
 
   <section id="profile">
     <div class="profile-top-container">
-      <div class="section_pic-container">
-        <img src="assets/profile.jpg" width="400px" height="300px" alt="Scarlett profile picture" />
-      </div>
-      <div class="section_text">
-        <style>
-          .btn-container {
-            margin-top: 15px;
-            /* adjust value as needed */
-          }
-        </style>
-        <p class="section_text_p1">Hello, I'm</p>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Scarlett He</h1>
-        <p class="section_text_p2">Data enthusiast | Python, SQL, R, PowerBI | Stats@Uchicago </p>
-        <div class="btn-container">
+        <p class="section__text__p2">Aspiring Data Scientist & Quant Analyst</p>
+        <p class="section__text__p2">Statistics @ UChicago</p>
+        <div class="btn-container" style="margin-top:15px;">
           <button class="btn btn-color-2"
             onclick="window.open('https://drive.google.com/file/d/1ZShLhfZJZL_-_Fawm_cjPgQS27HY20Ds/view?usp=sharing')">
             Resume
@@ -73,10 +65,13 @@
         </div>
         <div id="socials-container">
           <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-            onclick="location.href='https://www.linkedin.com/in/jiaqihe-stats/.com'" />
+            onclick="location.href='https://www.linkedin.com/in/jiaqihe-stats'" />
           <img src="./assets/github.png" alt="My Github profile" class="icon"
             onclick="location.href='https://github.com/scarletthejiaqi'" />
         </div>
+      </div>
+      <div class="section__pic-container">
+        <img src="assets/professional1.png" alt="Scarlett He" class="profile-cutout" />
       </div>
     </div>
 
@@ -194,110 +189,150 @@
         </div>
       </div>
     </div>
-    <a href="#experience">
+    <a href="#work-experience">
       <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" />
     </a>
   </section>
 
-  <section id="experience">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Skills</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container">
-          <h2 class="experience-sub-title">Data Scientist</h2>
-          <div class="article-container">
-            <article>
-              <div>
-                <h3>Python</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
+  <section id="work-experience">
+    <p class="section__text__p1">My Professional</p>
+    <h1 class="title">Experience</h1>
+    <p class="timeline-hint">Hover a dot to expand</p>
+    <div class="timeline-wrapper">
+      <div class="timeline-track"></div>
+      <div class="timeline-items">
 
-            <article>
-              <div>
-                <h3>SQL</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-
-            <article>
-              <div>
-                <h3>Data Wrangling</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-
-            <article>
-              <div>
-                <h3>Data Visualization</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-
-            <article>
-              <div>
-                <h3>Machine Learning</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-
-            <article>
-              <div>
-                <h3>Big Data Tools (Spark, Hadoop)</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-
+        <!-- PwC -->
+        <div class="timeline-item">
+          <div class="timeline-label">
+            <p class="tl-date">Jul–Aug 2023</p>
+            <p class="tl-company">PwC</p>
+            <p class="tl-role">Core Assurance Intern</p>
+          </div>
+          <div class="timeline-dot"></div>
+          <div class="popup-space">
+            <div class="timeline-popup">
+              <p class="popup-meta">Jul. 2023 – Aug. 2023 · Shanghai, China</p>
+              <h3 class="popup-company">PricewaterhouseCoopers</h3>
+              <p class="popup-role">Core Assurance Intern</p>
+              <ul class="popup-bullets">
+                <li>Automated data cleaning and validation using Python, improving data quality and cutting auditor
+                  review time</li>
+                <li>Created 5+ Excel dashboards to visualize revenue sheets, supporting audit investigations</li>
+              </ul>
+              <p class="popup-tools">Excel · NumPy · Pandas</p>
+            </div>
           </div>
         </div>
-        <div class="details-container">
-          <h2 class="experience-sub-title">Data Engineer</h2>
-          <div class="article-container">
 
-            <article>
-              <div>
-                <h3>Business Intelligence (Power BI, Tableau)</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-
-            <article>
-              <div>
-                <h3>Git</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-
-            <article>
-              <div>
-                <h3>Cloud Platforms (AWS, Azure, GCP)</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-
-            <article>
-              <div>
-                <h3>Database Management</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-
-            <article>
-              <div>
-                <h3>ETL Processes</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-
+        <!-- Marmon Holdings -->
+        <div class="timeline-item">
+          <div class="timeline-label">
+            <p class="tl-date">Jun–Aug 2024</p>
+            <p class="tl-company">Marmon Holdings</p>
+            <p class="tl-role">BI Intern</p>
+          </div>
+          <div class="timeline-dot"></div>
+          <div class="popup-space">
+            <div class="timeline-popup">
+              <p class="popup-meta">Jun. 2024 – Aug. 2024 · Skokie, IL</p>
+              <h3 class="popup-company">Marmon Holdings</h3>
+              <p class="popup-role">Business Intelligence Intern</p>
+              <ul class="popup-bullets">
+                <li>Forecasted 110% warehouse overflow within 3 months with ARIMA time-series, preventing supply chain
+                  disruptions</li>
+                <li>Implemented an ETL process to centralize outsourced data, enabling cross-unit performance
+                  comparisons for leadership</li>
+                <li>Automated POS data processing with Python multiprocessing pipeline, reducing manual workload by 75%
+                </li>
+              </ul>
+              <p class="popup-tools">Python · SQL · Power BI · ERP</p>
+            </div>
           </div>
         </div>
+
+        <!-- UChicago DSI -->
+        <div class="timeline-item">
+          <div class="timeline-label">
+            <p class="tl-date">Jun–Aug 2025</p>
+            <p class="tl-company">UChicago DSI</p>
+            <p class="tl-role">Research Assistant</p>
+          </div>
+          <div class="timeline-dot"></div>
+          <div class="popup-space">
+            <div class="timeline-popup">
+              <p class="popup-meta">Jun. 2025 – Aug. 2025 · Chicago, IL</p>
+              <h3 class="popup-company">UChicago Data Science Institute</h3>
+              <p class="popup-role">Research Assistant</p>
+              <ul class="popup-bullets">
+                <li>Fine-tuned 5 LLMs for offense detection, achieving 94% accuracy; benchmarked against GPT-4o
+                  few-shots, showed 54% F1 score increase</li>
+                <li>Conducted model evaluation on humor classification, reduced false positives by 22% with data
+                  augmentation</li>
+                <li>Designed schema and led annotation of ~2.5k jokes; documented reproducible training pipelines</li>
+              </ul>
+              <p class="popup-tools">PyTorch · HuggingFace · GPT-4o</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- AntGroup -->
+        <div class="timeline-item">
+          <div class="timeline-label">
+            <p class="tl-date">Aug–Sep 2025</p>
+            <p class="tl-company">AntGroup</p>
+            <p class="tl-role">Data Science Intern</p>
+          </div>
+          <div class="timeline-dot"></div>
+          <div class="popup-space">
+            <div class="timeline-popup">
+              <p class="popup-meta">Aug. 2025 – Sep. 2025 · Shanghai, China</p>
+              <h3 class="popup-company">AntGroup</h3>
+              <p class="popup-role">Data Science Intern</p>
+              <ul class="popup-bullets">
+                <li>Extracted and engineered 12,140+ Alipay questionnaire records; segmented age-specific consumption
+                  patterns and built an automated ML pipeline with DeepSeek to retrain preference models quarterly</li>
+                <li>Built econometric + AI pipeline to quantify AI's impact on Total Factor Productivity (TFP) across
+                  industries</li>
+              </ul>
+              <p class="popup-tools">NumPy · Pandas · TensorFlow · DeepSeek</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bank of America -->
+        <div class="timeline-item">
+          <div class="timeline-label">
+            <p class="tl-date">Jan–Mar 2026</p>
+            <p class="tl-company">Bank of America</p>
+            <p class="tl-role">Quant Researcher</p>
+          </div>
+          <div class="timeline-dot"></div>
+          <div class="popup-space">
+            <div class="timeline-popup popup-align-right">
+              <p class="popup-meta">Jan. 2026 – Mar. 2026 · Chicago, IL</p>
+              <h3 class="popup-company">Bank of America Project Lab</h3>
+              <p class="popup-role">Quantitative Researcher</p>
+              <ul class="popup-bullets">
+                <li>Engineered an end-to-end AI agent (LangChain, Mistral 14B) automating regulatory credit memo QA/QC
+                </li>
+                <li>Architected a parallel OCR + docx parsing pipeline, reducing preprocessing latency by 30× over
+                  sequential baselines</li>
+                <li>Developed NLP rules extracting key debt metrics with source citations, generating Excel reports for
+                  credit analytics</li>
+              </ul>
+              <p class="popup-tools">Python · Ollama · LangChain · RAG</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
     <a href="#projects">
       <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" />
     </a>
   </section>
+
   <section id="projects">
     <p class="section__text__p1">Browse My Recent</p>
     <h1 class="title">Projects</h1>
