@@ -109,7 +109,7 @@
           <span>Quick jump</span>
           <kbd data-mod-key>⌘K</kbd>
         </button>
-        <a class="btn btn-dark btn-sm" href="https://drive.google.com/file/d/1ZShLhfZJZL_-_Fawm_cjPgQS27HY20Ds/view?usp=sharing"
+        <a class="btn btn-dark btn-sm" href="assets/Jiaqi_Scarlett_He_Resume.pdf"
           target="_blank" rel="noopener" data-track="resume_nav">
           Resume <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right" /></svg>
         </a>
@@ -147,7 +147,7 @@
             <span class="hl">LLM agents</span>, <span class="hl">ML pipelines</span>, <span class="hl">fraud-detection
               models</span> and <span class="hl">dashboards for decision-makers</span>.</p>
           <div class="hero-cta reveal" style="--d:300ms">
-            <a class="btn btn-dark" href="https://drive.google.com/file/d/1ZShLhfZJZL_-_Fawm_cjPgQS27HY20Ds/view?usp=sharing"
+            <a class="btn btn-dark" href="assets/Jiaqi_Scarlett_He_Resume.pdf"
               target="_blank" rel="noopener" data-track="resume_hero">
               <svg class="i" aria-hidden="true"><use href="#i-file" /></svg> Resume
             </a>
@@ -581,16 +581,16 @@
           </article>
 
           <!-- Fraud detection -->
-          <article class="feature card spot reveal" style="--d:100ms" id="fraud" data-item="Real-time fraud detection pipeline"
-            data-skills="python xgboost lightgbm shap mlflow onnx kafka redis docker sklearn pandas">
+          <article class="feature card spot reveal" style="--d:100ms" id="fraud" data-item="Payment fraud detection pipeline"
+            data-skills="python xgboost lightgbm shap mlflow onnx sklearn pandas">
             <div class="feature-visual feature-visual-sm">
               <div class="metrics" data-metrics>
                 <div class="metrics-head">
-                  <span class="metrics-title">Validation metrics</span>
+                  <span class="metrics-title">Holdout metrics · chronological split</span>
                   <div class="segmented" role="group" aria-label="Choose model">
                     <button type="button" data-model="xgb" aria-pressed="false">XGBoost</button>
-                    <button type="button" data-model="lgbm" aria-pressed="true" class="is-active">LightGBM</button>
-                    <button type="button" data-model="ens" aria-pressed="false">Ensemble</button>
+                    <button type="button" data-model="lgbm" aria-pressed="false">LightGBM</button>
+                    <button type="button" data-model="ens" aria-pressed="true" class="is-active">Ensemble</button>
                   </div>
                 </div>
                 <div class="metric-rows"></div>
@@ -601,19 +601,21 @@
               <div class="badges">
                 <span class="tag">Production ML</span>
               </div>
-              <h3 class="feature-title">Real-Time Fraud Detection Pipeline</h3>
-              <p class="feature-sub">Personal project · 590K card transactions (IEEE-CIS), 3.5% fraud</p>
-              <p class="feature-desc">A production-style fraud system, not a notebook: a gradient-boosted ensemble, MLflow
-                model registry, ONNX export for fast CPU inference, and Docker Compose infrastructure for Kafka + Redis.</p>
+              <h3 class="feature-title">Payment Fraud Detection Pipeline</h3>
+              <p class="feature-sub">Personal project · 590K e-commerce transactions (IEEE-CIS), 3.5% fraud</p>
+              <p class="feature-desc">Flags fraudulent payments with an XGBoost + LightGBM ensemble: <strong>0.91 AUC</strong>
+                on a chronological holdout of the most recent 20% of transactions, tracked in MLflow and exported to ONNX
+                for fast CPU inference.</p>
               <ul class="points">
-                <li>Traced LightGBM stopping after one tree to log-loss early stopping under class imbalance; AUC +
-                  <code>scale_pos_weight</code> lifted <strong>AUC 0.866 → 0.969</strong></li>
-                <li>F1-optimal decision thresholds instead of 0.5 for a 3.5% base rate; SHAP for interpretability</li>
-                <li>NLP ablation: 10K synthetic support chats (Llama-3) embedded with MiniLM, framed honestly as an
-                  augmentation experiment</li>
+                <li>Caught a too-good-to-be-true <strong>0.97 AUC</strong> caused by look-ahead leakage; a chronological
+                  80/20 split and train-only imputation gave an honest <strong>0.91</strong></li>
+                <li>Found LightGBM stopping after one boosting round (early stopping watched log-loss on rare fraud);
+                  <code>scale_pos_weight</code> + AUC early stopping let it train fully</li>
+                <li>F1-optimal alert threshold (~0.8, not the default 0.5) from the precision–recall curve; SHAP to
+                  explain what drives fraud scores</li>
               </ul>
               <ul class="chips" aria-label="Stack">
-                <li>XGBoost</li><li>LightGBM</li><li>SHAP</li><li>MLflow</li><li>ONNX</li><li>Kafka</li><li>Redis</li>
+                <li>XGBoost</li><li>LightGBM</li><li>SHAP</li><li>MLflow</li><li>ONNX</li>
               </ul>
               <div class="feature-links">
                 <button class="btn btn-dark btn-sm" type="button" data-case="case-fraud" data-track="case_fraud">Case study</button>
@@ -869,7 +871,6 @@
             <li><button type="button" class="skill" data-skill="econometrics">Regression &amp; econometrics</button></li>
             <li><button type="button" class="skill" data-skill="bayesian" data-note="Coursework: Bayesian Statistics (see the hierarchical-model sketch in my gallery)">Bayesian statistics</button></li>
             <li><button type="button" class="skill" data-skill="stochastic" data-note="Coursework: Stochastic Processes">Stochastic processes</button></li>
-            <li><button type="button" class="skill" data-skill="fixedincome" data-note="Coursework: Fixed Income at UChicago, plus Treasury-yield forecasting in Agenthon">Fixed income</button></li>
           </ul>
         </div>
         <div class="card skill-group reveal">
@@ -881,8 +882,6 @@
             <li><button type="button" class="skill" data-skill="docker">Docker</button></li>
             <li><button type="button" class="skill" data-skill="mlflow">MLflow</button></li>
             <li><button type="button" class="skill" data-skill="onnx">ONNX</button></li>
-            <li><button type="button" class="skill" data-skill="kafka">Kafka</button></li>
-            <li><button type="button" class="skill" data-skill="redis">Redis</button></li>
             <li><button type="button" class="skill" data-skill="aws">AWS</button></li>
           </ul>
         </div>
@@ -896,6 +895,7 @@
           </ul>
         </div>
         <div class="card skill-insight reveal" style="--d:120ms" aria-live="polite">
+          <p class="insight-kicker">Where I've used it <span class="insight-hint">· tap any skill to switch</span></p>
           <p class="insight-empty"><span class="insight-emoji" aria-hidden="true">👆</span> Pick any skill: I'll show you
             exactly where I've used it, with links.</p>
           <div class="insight-body" hidden>
@@ -964,7 +964,7 @@
             <p class="leader-role">Team Leader, Women's NCTTA Team</p>
             <ul class="bullets">
               <li>Grew membership <strong>30% year over year</strong> by running the club's social media</li>
-              <li>Led fundraising that raised <strong>$2,000+</strong> for events and NCTTA competitions</li>
+              <li>Led fundraising that raised <strong>$3,000+</strong> for events and NCTTA competitions</li>
             </ul>
           </div>
         </aside>
@@ -982,8 +982,8 @@
             quantitative research and machine learning</strong>. If you're hiring, or just want to talk forecasting, LLM
           agents or baking, I'd love to hear from you.</p>
         <div class="contact-pill">
-          <a class="contact-item" href="mailto:scarlett_hjq@outlook.com" data-track="email_contact">
-            <svg class="i" aria-hidden="true"><use href="#i-mail" /></svg><span data-email-text>scarlett_hjq@outlook.com</span>
+          <a class="contact-item" href="mailto:hjqscarlett@gmail.com" data-track="email_contact">
+            <svg class="i" aria-hidden="true"><use href="#i-mail" /></svg><span data-email-text>hjqscarlett@gmail.com</span>
           </a>
           <button class="copy-btn" type="button" data-copy-email data-track="copy_email_contact">
             <svg class="i" aria-hidden="true"><use href="#i-copy" /></svg><span>Copy</span>
@@ -994,7 +994,7 @@
           <a class="contact-item" href="https://github.com/scarletthejiaqi" target="_blank" rel="noopener"
             data-track="github_contact"><svg class="i" aria-hidden="true"><use href="#i-github" /></svg>GitHub</a>
         </div>
-        <a class="btn btn-dark" href="https://drive.google.com/file/d/1ZShLhfZJZL_-_Fawm_cjPgQS27HY20Ds/view?usp=sharing"
+        <a class="btn btn-dark" href="assets/Jiaqi_Scarlett_He_Resume.pdf"
           target="_blank" rel="noopener" data-track="resume_contact"><svg class="i" aria-hidden="true"><use href="#i-file" /></svg> View my resume</a>
       </div>
     </section>
@@ -1156,11 +1156,11 @@
     <div class="modal-inner">
       <button class="modal-close icon-btn" type="button" data-close aria-label="Close"><svg class="i"><use href="#i-x" /></svg></button>
       <p class="modal-kicker">Case study</p>
-      <h2 class="modal-title" id="case-fraud-title">Real-Time Fraud Detection Pipeline</h2>
+      <h2 class="modal-title" id="case-fraud-title">Payment Fraud Detection Pipeline</h2>
       <ul class="modal-meta">
         <li>Personal project</li>
         <li>2026</li>
-        <li>XGBoost · LightGBM · MLflow · ONNX · Kafka · Redis</li>
+        <li>XGBoost · LightGBM · SHAP · MLflow · ONNX</li>
       </ul>
 
       <h3>The problem</h3>
@@ -1175,25 +1175,36 @@
           thresholds saved for serving.</li>
         <li><strong>MLOps:</strong> every run logged to MLflow with versioned models and a Staging alias; models exported
           to ONNX for fast CPU inference.</li>
-        <li><strong>Infrastructure:</strong> Docker Compose for Kafka (KRaft mode) and Redis.</li>
       </ul>
 
-      <h3>The debugging story</h3>
-      <p>LightGBM's first run stopped after a single iteration (AUC 0.866, PR-AUC 0.329). With no metric set, early
-        stopping watched log-loss, which gets worse on an imbalanced validation set as <code>is_unbalance</code> up-weights
-        fraud, even while ranking quality is still improving. Switching to <code>scale_pos_weight</code> (≈27.6, matching
-        XGBoost) and AUC as the stopping metric let it train all 1,000 rounds: <strong>AUC 0.969, PR-AUC 0.812</strong>.
-      </p>
+      <h3>Catching the leak</h3>
+      <p>The first results showed <strong>AUC 0.96–0.97</strong>, above what heavily tuned winning Kaggle solutions reach
+        on this dataset (~0.945–0.96), so I treated it as a red flag rather than a win. Two leaks were inflating it:</p>
+      <ul class="modal-list">
+        <li><strong>Random split on time-ordered data.</strong> Shuffling before splitting let the model train on future
+          transactions and validate on past ones. Fixed with a chronological split: oldest 80% to train, most recent 20%
+          to validate.</li>
+        <li><strong>Imputation leakage.</strong> Missing values were filled with medians computed on the full dataset,
+          including validation rows. Fixed by fitting the imputer on the training set only.</li>
+      </ul>
+      <p>The honest result: <strong>AUC 0.91</strong> (ensemble 0.912), about 0.05 lower, which is exactly the leakage
+        that had been inflating it.</p>
 
-      <h3>Results (validation set)</h3>
+      <h3>The early-stopping bug</h3>
+      <p>LightGBM's first run stopped after a single boosting round. With no metric set, early stopping watched log-loss,
+        which gets worse on an imbalanced validation set as fraud is up-weighted, even while ranking quality is still
+        improving. Switching to <code>scale_pos_weight</code> (matching XGBoost) and AUC as the stopping metric let it
+        train fully.</p>
+
+      <h3>Results (chronological holdout, most recent 20%)</h3>
       <table class="modal-table">
         <thead>
           <tr><th scope="col">Model</th><th scope="col" class="num">AUC</th><th scope="col" class="num">PR-AUC</th><th scope="col" class="num">F1</th><th scope="col" class="num">Precision</th><th scope="col" class="num">Recall</th></tr>
         </thead>
         <tbody>
-          <tr><th scope="row">XGBoost</th><td class="num">0.961</td><td class="num">0.762</td><td class="num">0.714</td><td class="num">0.828</td><td class="num">0.627</td></tr>
-          <tr class="is-ours"><th scope="row">LightGBM</th><td class="num">0.969</td><td class="num">0.812</td><td class="num">0.770</td><td class="num">0.848</td><td class="num">0.704</td></tr>
-          <tr><th scope="row">Ensemble</th><td class="num">0.967</td><td class="num">0.796</td><td class="num">0.750</td><td class="num">0.840</td><td class="num">0.678</td></tr>
+          <tr><th scope="row">XGBoost</th><td class="num">0.910</td><td class="num">0.524</td><td class="num">0.503</td><td class="num">0.568</td><td class="num">0.452</td></tr>
+          <tr><th scope="row">LightGBM</th><td class="num">0.908</td><td class="num">0.518</td><td class="num">0.504</td><td class="num">0.632</td><td class="num">0.420</td></tr>
+          <tr class="is-ours"><th scope="row">Ensemble</th><td class="num">0.912</td><td class="num">0.526</td><td class="num">0.503</td><td class="num">0.678</td><td class="num">0.400</td></tr>
         </tbody>
       </table>
 

@@ -20,9 +20,9 @@
   const isTyping = (t) => t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable);
   const anyDialogOpen = () => !!document.querySelector('dialog[open]');
 
-  const EMAIL = 'scarlett_hjq@outlook.com';
+  const EMAIL = 'hjqscarlett@gmail.com';
   const LINKS = {
-    resume: 'https://drive.google.com/file/d/1ZShLhfZJZL_-_Fawm_cjPgQS27HY20Ds/view?usp=sharing',
+    resume: 'assets/Jiaqi_Scarlett_He_Resume.pdf',
     linkedin: 'https://www.linkedin.com/in/jiaqihe-stats',
     github: 'https://github.com/scarletthejiaqi',
     leaderboard: 'https://www.agenthon.net/#leaderboard',
@@ -655,23 +655,31 @@
   }
   $$('[data-fan]').forEach(initFan);
 
-  /* ---------- Fraud metrics chart (real validation numbers from the repo) ---------- */
+  /* ---------- Fraud metrics chart (ENGINEERING_LOG.md: honest chronological split; ghost = leaky random split) ---------- */
   function initMetrics(root) {
     const DATA = {
-      xgb: { name: 'XGBoost', v: { AUC: 0.9611, 'PR-AUC': 0.7621, F1: 0.7135, Precision: 0.8283, Recall: 0.6267 } },
+      xgb: {
+        name: 'XGBoost',
+        v: { AUC: 0.9095, 'PR-AUC': 0.5241, F1: 0.5033, Precision: 0.5681, Recall: 0.4518 },
+        before: { AUC: 0.9611, 'PR-AUC': 0.7621, F1: 0.7135, Precision: 0.8283, Recall: 0.6267 },
+      },
       lgbm: {
         name: 'LightGBM',
-        v: { AUC: 0.9689, 'PR-AUC': 0.8118, F1: 0.7697, Precision: 0.8484, Recall: 0.7043 },
-        before: { AUC: 0.8657, 'PR-AUC': 0.3291, F1: 0.4193 },
+        v: { AUC: 0.9083, 'PR-AUC': 0.5176, F1: 0.5043, Precision: 0.6319, Recall: 0.4195 },
+        before: { AUC: 0.9689, 'PR-AUC': 0.8118, F1: 0.7697, Precision: 0.8484, Recall: 0.7043 },
       },
-      ens: { name: 'Ensemble', v: { AUC: 0.9667, 'PR-AUC': 0.7957, F1: 0.7502, Precision: 0.8403, Recall: 0.6775 } },
+      ens: {
+        name: 'Ensemble',
+        v: { AUC: 0.9119, 'PR-AUC': 0.5258, F1: 0.5028, Precision: 0.6778, Recall: 0.3996 },
+        before: { AUC: 0.9667, 'PR-AUC': 0.7957, F1: 0.7502, Precision: 0.8403, Recall: 0.6775 },
+      },
     };
     const METRICS = ['AUC', 'PR-AUC', 'F1', 'Precision', 'Recall'];
     const f3 = (v) => (Math.round(v * 1000 + 1e-9) / 1000).toFixed(3); // half-up, avoids 0.6775 -> 0.677
     const rowsEl = $('.metric-rows', root);
     const tip = $('.metrics-tooltip', root);
     const buttons = $$('[data-model]', root);
-    let currentKey = 'lgbm';
+    let currentKey = 'ens';
 
     const rows = METRICS.map((m) => {
       const row = el('div', 'metric-row');
@@ -693,7 +701,7 @@
     axis.append(el('span'), scaleEl, el('span'));
     rowsEl.after(axis);
     const note = el('p', 'metric-note');
-    note.append(el('span', 'ghost-key'), el('span', '', "LightGBM's first run, before the early-stopping fix"));
+    note.append(el('span', 'ghost-key'), el('span', '', 'Leaky random split I caught and fixed (too good to be true)'));
     axis.after(note);
 
     function render(key, animate = true) {
@@ -711,7 +719,7 @@
         r.val.textContent = f3(v);
         r.ghost.style.opacity = before ? '1' : '0';
         if (before) r.ghost.style.setProperty('--g', before.toFixed(4));
-        r.trackEl.setAttribute('aria-label', `${d.name} ${r.m}: ${f3(v)}${before ? `, ${f3(before)} before the fix` : ''}`);
+        r.trackEl.setAttribute('aria-label', `${d.name} ${r.m}: ${f3(v)}${before ? `, ${f3(before)} with the leaky split` : ''}`);
       });
       note.style.visibility = d.before ? 'visible' : 'hidden';
     }
@@ -727,7 +735,7 @@
       tip.append(row);
       if (before) {
         const row2 = el('div', 'tip-row');
-        row2.append(el('span', 'tip-key ink'), el('strong', '', f3(before)), el('span', '', 'before the fix'));
+        row2.append(el('span', 'tip-key ink'), el('strong', '', f3(before)), el('span', '', 'leaky split'));
         tip.append(row2);
       }
       tip.hidden = false;
@@ -813,16 +821,11 @@
       }
     }
 
-    skillBtns.forEach((btn) => btn.addEventListener('click', () => {
+    // The panel is never empty: it opens on a default skill, and clicking the
+    // active skill again keeps it shown instead of clearing the panel.
+    function showSkill(btn, highlight) {
       const key = btn.dataset.skill;
       clearMatches();
-      if (activeSkill === key) {
-        activeSkill = null;
-        btn.setAttribute('aria-pressed', 'false');
-        body.hidden = true;
-        empty.hidden = false;
-        return;
-      }
       activeSkill = key;
       skillBtns.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
       const matches = items.filter((it) => it.skills.includes(key));
@@ -839,6 +842,7 @@
           b.addEventListener('click', () => goToItem(it));
           li.appendChild(b);
           list.appendChild(li);
+          if (!highlight) return;
           if (it.type === 'Project') it.el.classList.add('is-match');
           else {
             const tab = document.querySelector(`[aria-controls="${it.el.id}"]`);
@@ -849,9 +853,16 @@
       if (btn.dataset.note) list.appendChild(el('li', 'insight-note', btn.dataset.note));
       empty.hidden = true;
       body.hidden = false;
-      track('skill_click', { skill: key });
+    }
+
+    skillBtns.forEach((btn) => btn.addEventListener('click', () => {
+      if (activeSkill === btn.dataset.skill) return;
+      showSkill(btn, true);
+      track('skill_click', { skill: btn.dataset.skill });
     }));
     skillBtns.forEach((b) => b.setAttribute('aria-pressed', 'false'));
+    const defaultSkill = $('.skill[data-skill="llm"]') || skillBtns[0];
+    if (defaultSkill) showSkill(defaultSkill, false);
   }
 
   /* ---------- Gallery filter + lightbox ---------- */
@@ -950,11 +961,11 @@
       { group: 'Navigate', label: 'Skills', hint: 'Tools & methods', run: () => go('#skills'), kw: 'python sql pytorch stack' },
       { group: 'Navigate', label: 'About me', hint: 'Photos & story', run: () => go('#about'), kw: 'bio baking hobbies leadership' },
       { group: 'Navigate', label: 'Contact', hint: 'Say hi', run: () => go('#contact'), kw: 'email hire reach' },
-      { group: 'Actions', label: 'Open resume', hint: 'Google Drive', run: () => openUrl(LINKS.resume, 'resume_palette'), kw: 'cv download pdf' },
+      { group: 'Actions', label: 'Open resume', hint: 'PDF', run: () => openUrl(LINKS.resume, 'resume_palette'), kw: 'cv download pdf' },
       { group: 'Actions', label: 'Copy email address', hint: EMAIL, run: () => copyEmail(), kw: 'mail contact' },
       { group: 'Actions', label: 'Case study: Agenthon Track 2', hint: '1st of 87', run: () => openCase('case-t2'), kw: 'forecasting neurips' },
       { group: 'Actions', label: 'Case study: Agenthon Track 4', hint: '4th of 63', run: () => openCase('case-t4'), kw: 'llm agent explainability' },
-      { group: 'Actions', label: 'Case study: Fraud detection', hint: 'XGBoost + LightGBM', run: () => openCase('case-fraud'), kw: 'ml mlops kafka' },
+      { group: 'Actions', label: 'Case study: Fraud detection', hint: 'XGBoost + LightGBM', run: () => openCase('case-fraud'), kw: 'ml mlops leakage auc' },
       { group: 'Links', label: 'LinkedIn', hint: 'jiaqihe-stats', run: () => openUrl(LINKS.linkedin, 'linkedin_palette'), kw: 'social' },
       { group: 'Links', label: 'GitHub', hint: 'scarletthejiaqi', run: () => openUrl(LINKS.github, 'github_palette'), kw: 'code repos' },
       { group: 'Links', label: 'Agenthon leaderboard', hint: 'agenthon.net', run: () => openUrl(LINKS.leaderboard, 'leaderboard_palette'), kw: 'results rank' },
