@@ -2817,6 +2817,13 @@ dialog::backdrop {
   animation-delay: var(--delay, 0s);
 }
 
+/* Small peanut butter cup: orange ridged wrapper + chocolate top */
+.choco-cup {
+  width: var(--s, 1.3rem);
+  height: var(--s, 1.3rem);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3.5 14h25l-3 13.2Q16 30 6.5 27.2Z' fill='%23f47b20'/%3E%3Cg stroke='%23c9560c' stroke-width='1.3' stroke-linecap='round'%3E%3Cpath d='M8 15.5l1.2 11.6M12.6 15.8l.6 12.4M16 16v12.6M19.4 15.8l-.6 12.4M24 15.5l-1.2 11.6'/%3E%3C/g%3E%3Cellipse cx='16' cy='14' rx='13.5' ry='5' fill='%23704020'/%3E%3Cellipse cx='16' cy='13.4' rx='10.5' ry='3.4' fill='%23532d14'/%3E%3Cellipse cx='12' cy='12.4' rx='3.2' ry='1' fill='%23946039'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
 @keyframes fall {
   to {
     transform: translateY(calc(100vh + 6rem)) rotate(var(--r, 360deg));

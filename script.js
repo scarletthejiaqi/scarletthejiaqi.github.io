@@ -912,12 +912,14 @@
   /* ---------- Easter egg: chocolate rain ---------- */
   function chocoRain() {
     if (reduceMotion) { toast('🍫 Consider it rained. (Reduced motion is on.)'); return; }
-    const treats = ['🍫', '🍫', '🍫', '🥜', '🍰', '🧁'];
-    for (let i = 0; i < 36; i++) {
-      const s = el('span', 'choco', treats[Math.floor(Math.random() * treats.length)]);
+    // 'cup' = small peanut butter cup drawn in CSS; most of the rain is cups
+    const treats = ['cup', 'cup', 'cup', 'cup', 'cup', '🍫', '🍫', '🍰', '🧁'];
+    for (let i = 0; i < 40; i++) {
+      const t = treats[Math.floor(Math.random() * treats.length)];
+      const s = t === 'cup' ? el('span', 'choco choco-cup') : el('span', 'choco', t);
       s.setAttribute('aria-hidden', 'true');
       s.style.setProperty('--x', `${(Math.random() * 100).toFixed(1)}vw`);
-      s.style.setProperty('--s', `${(1.3 + Math.random() * 1.4).toFixed(2)}rem`);
+      s.style.setProperty('--s', `${(1 + Math.random() * 0.7).toFixed(2)}rem`);
       s.style.setProperty('--t', `${(2.4 + Math.random() * 2).toFixed(2)}s`);
       s.style.setProperty('--delay', `${(Math.random() * 0.9).toFixed(2)}s`);
       s.style.setProperty('--r', `${Math.random() > 0.5 ? '' : '-'}${Math.round(180 + Math.random() * 360)}deg`);
