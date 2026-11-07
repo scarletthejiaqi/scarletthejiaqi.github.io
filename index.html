@@ -1,483 +1,1225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scarlett He</title>
+  <title>Scarlett He · Data Scientist &amp; Quant Researcher</title>
+  <meta name="description"
+    content="Scarlett (Jiaqi) He: UChicago Statistics, graduating Dec 2026. 1st of 87 teams at the NeurIPS 2026 Agenthon forecasting track. Data science, quant research and ML experience at Bank of America, Ant Group, PwC and Marmon (Berkshire Hathaway).">
+  <meta name="author" content="Jiaqi (Scarlett) He">
+  <link rel="canonical" href="https://scarletthejiaqi.github.io/">
+  <meta name="theme-color" content="#FFC0CB">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://scarletthejiaqi.github.io/">
+  <meta property="og:title" content="Scarlett He · Data Scientist & Quant Researcher">
+  <meta property="og:description"
+    content="1st of 87 teams at the NeurIPS 2026 Agenthon forecasting track. UChicago Statistics, graduating Dec 2026, open to full-time roles.">
+  <meta property="og:image" content="https://scarletthejiaqi.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Scarlett He · Data Scientist & Quant Researcher">
+  <meta name="twitter:description" content="1st of 87 teams at the NeurIPS 2026 Agenthon forecasting track. UChicago Statistics, graduating Dec 2026.">
+  <meta name="twitter:image" content="https://scarletthejiaqi.github.io/assets/og-image.png">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/portrait.webp" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mediaqueries.css">
 
+  <script>
+    document.documentElement.classList.replace('no-js', 'js');
+    // Safety net: if the main script never runs, reveal all content anyway.
+    setTimeout(function () { if (!window.__siteReady) document.documentElement.classList.add('reveal-all'); }, 2500);
+  </script>
+
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R8S72LMX4G"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-R8S72LMX4G');
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Scarlett He",
+    "alternateName": "Jiaqi He",
+    "url": "https://scarletthejiaqi.github.io/",
+    "image": "https://scarletthejiaqi.github.io/assets/img/portrait.webp",
+    "jobTitle": "Data Scientist & Quantitative Researcher",
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of Chicago" },
+      { "@type": "CollegeOrUniversity", "name": "University of Illinois Urbana-Champaign" }
+    ],
+    "award": "1st place of 87 teams, Agenthon 2026 Track 2 (Forecasting), NeurIPS 2026 Competition Track",
+    "knowsAbout": ["Data science", "Machine learning", "Probabilistic forecasting", "Quantitative research", "LLM agents", "Statistics"],
+    "sameAs": ["https://www.linkedin.com/in/jiaqihe-stats", "https://github.com/scarletthejiaqi"]
+  }
+  </script>
 </head>
 
 <body>
-  <div id="vanta-bg"></div>
-  <nav id="desktop-nav">
-    <div class="logo">Scarlett He</div>
-    <div>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57l-.02-2.04c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22l-.01 3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></g></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></g></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></g></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></g></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></g></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></g></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></g></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></g></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></g></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></g></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="vanta-bg" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="logo" href="#top">Scarlett He</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#work-experience">Experience</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="palette-trigger" type="button" data-palette-open aria-label="Open quick actions">
+          <svg class="i" aria-hidden="true"><use href="#i-search" /></svg>
+          <span>Quick jump</span>
+          <kbd data-mod-key>⌘K</kbd>
+        </button>
+        <a class="btn btn-dark btn-sm" href="assets/Jiaqi_Scarlett_He_Resume.pdf"
+          target="_blank" rel="noopener" data-track="resume_nav">
+          Resume <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right" /></svg>
+        </a>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-  </nav>
-  <nav id="hamburger-nav">
-    <div class="logo">Scarlett He</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#work-experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
-    </div>
-  </nav>
+  </header>
 
-  <section id="profile">
-    <div class="profile-top-container">
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Scarlett He</h1>
-        <p class="section__text__p2">Aspiring Data Scientist & Quant Analyst</p>
-        <p class="section__text__p2">Statistics @ UChicago</p>
-        <div class="btn-container" style="margin-top:15px;">
-          <button class="btn btn-color-2"
-            onclick="window.open('https://drive.google.com/file/d/1ZShLhfZJZL_-_Fawm_cjPgQS27HY20Ds/view?usp=sharing')">
-            Resume
-          </button>
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section id="top" class="hero" aria-label="Introduction">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <a class="award-chip reveal" href="#featured" data-track="award_chip">
+            <span class="award-icon" aria-hidden="true">🏆</span>
+            <span><strong>1st of 87<span class="hide-sm"> teams</span></strong> · NeurIPS 2026 Agenthon</span>
+            <svg class="i" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+          </a>
+          <p class="hero-kicker reveal" style="--d:60ms">Hello, I'm</p>
+          <h1 class="hero-name reveal" style="--d:120ms">Scarlett He</h1>
+          <p class="hero-role reveal" style="--d:180ms">Data Scientist &amp; Quant Researcher</p>
+          <p class="hero-meta reveal" style="--d:220ms"><span>Statistics @ UChicago ·</span> <span>Graduating Dec 2026</span></p>
+          <p class="hero-typed reveal" style="--d:260ms">I build <span class="hl">probabilistic forecasts</span>,
+            <span class="hl">LLM agents</span>, <span class="hl">ML pipelines</span>, <span class="hl">fraud-detection
+              models</span> and <span class="hl">dashboards for decision-makers</span>.</p>
+          <div class="hero-cta reveal" style="--d:300ms">
+            <a class="btn btn-dark" href="assets/Jiaqi_Scarlett_He_Resume.pdf"
+              target="_blank" rel="noopener" data-track="resume_hero">
+              <svg class="i" aria-hidden="true"><use href="#i-file" /></svg> Resume
+            </a>
+            <a class="btn btn-outline" href="#contact">Get in touch</a>
+            <div class="socials">
+            <a href="https://www.linkedin.com/in/jiaqihe-stats" target="_blank" rel="noopener" aria-label="LinkedIn profile"
+              data-track="linkedin_hero"><svg aria-hidden="true"><use href="#i-linkedin" /></svg></a>
+            <a href="https://github.com/scarletthejiaqi" target="_blank" rel="noopener" aria-label="GitHub profile"
+              data-track="github_hero"><svg aria-hidden="true"><use href="#i-github" /></svg></a>
+            <button type="button" data-copy-email aria-label="Copy email address" data-track="copy_email_hero"><svg
+                aria-hidden="true"><use href="#i-mail" /></svg></button>
+            </div>
+          </div>
+          <p class="availability reveal" style="--d:380ms"><span class="pulse" aria-hidden="true"></span>Open to full-time
+            roles in data science, quant &amp; ML</p>
         </div>
-        <div id="socials-container">
-          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-            onclick="location.href='https://www.linkedin.com/in/jiaqihe-stats'" />
-          <img src="./assets/github.png" alt="My Github profile" class="icon"
-            onclick="location.href='https://github.com/scarletthejiaqi'" />
+        <div class="hero-portrait" data-tilt>
+          <img src="assets/img/portrait.webp" alt="Portrait of Scarlett He" width="703" height="900" fetchpriority="high">
         </div>
       </div>
-      <div class="section__pic-container">
-        <img src="assets/professional1.png" alt="Scarlett He" class="profile-cutout" />
-      </div>
-    </div>
 
-    <!-- index.html -->
-
-    <!-- NEW Three-Column Education Box -->
-    <div class="details-container education-section-container">
-      <div class="education-layout-container">
-
-        <!-- Column 1: Left Coursework List -->
-        <div class="education-column">
-          <h4>Statistics Coursework</h4>
+      <!-- Education: the portrait "stands" on this card -->
+      <div class="card education reveal">
+        <div class="edu-col edu-center">
+          <h2 class="edu-title">Education</h2>
+          <div class="school">
+            <p class="school-name">University of Chicago</p>
+            <p>B.S. Statistics <span class="nowrap"><span class="sep">·</span> GPA 3.66</span></p>
+            <p class="muted">Sep 2024 – Dec 2026</p>
+          </div>
+          <div class="school">
+            <p class="school-name">University of Illinois Urbana-Champaign</p>
+            <p>Statistics &amp; Computer Science <span class="nowrap"><span class="sep">·</span> GPA 3.98</span></p>
+            <p class="muted">Aug 2022 – May 2024</p>
+          </div>
+        </div>
+        <div class="edu-col edu-left">
+          <h3 class="edu-heading">Statistics coursework</h3>
           <ul>
-            <li>Modern Methods in Applied Statistics(M.S. Course)</li>
-            <li>Statistical Modeling</li>
+            <li>Modern Methods in Applied Statistics <span class="muted">(M.S.)</span></li>
+            <li>Stochastic Processes</li>
             <li>Time Series Analysis</li>
             <li>Bayesian Statistics</li>
           </ul>
         </div>
-
-        <!-- Column 2: Center (Original Content) -->
-        <div class="education-column education-center-column">
-          <!-- <img
-              src="./assets/education.png"
-              alt="Education icon"
-              class="icon"
-            /> -->
-          <h3>Education</h3>
-
-          <div class="school-entry">
-            <p><strong>University of Illinois at Urbana-Champaign</strong></p>
-            <p>B.Sc. Statistics & Computer Science</p>
-            <p>Aug. 2022 - May. 2024</p>
-          </div>
-
-
-          <div class="school-entry">
-            <p><strong>University of Chicago</strong></p>
-            <p>B.Sc. Statistics</p>
-            <p>Sep. 2024 - Dec. 2026</p>
-          </div>
-        </div>
-
-        <!-- Column 3: Right Coursework List -->
-        <div class="education-column">
-          <h4>Computer Science Coursework</h4>
+        <div class="edu-col edu-right">
+          <h3 class="edu-heading">CS &amp; finance coursework</h3>
           <ul>
             <li>Machine Learning</li>
             <li>Natural Language Processing</li>
-            <li>Data Structures and Algorithms</li>
-            <li>Systems Programming</li>
+            <li>Data Structures &amp; Algorithms</li>
+            <li>Fixed Income</li>
           </ul>
         </div>
-
       </div>
-    </div>
 
-  </section>
+      <ul class="stats" aria-label="Highlights">
+        <li class="stat card reveal">
+          <span class="stat-value"><span>#1</span><span
+              class="stat-of">/ 87</span></span>
+          <span class="stat-label">NeurIPS 2026 Agenthon, forecasting track</span>
+        </li>
+        <li class="stat card reveal" style="--d:80ms">
+          <span class="stat-value"><span>5</span></span>
+          <span class="stat-label">industry &amp; research roles</span>
+        </li>
+        <li class="stat card reveal" style="--d:160ms">
+          <span class="stat-value"><span>30</span>×</span>
+          <span class="stat-label">faster document pipeline at Bank of America</span>
+        </li>
+        <li class="stat card reveal" style="--d:240ms">
+          <span class="stat-value"><span>3.98</span></span>
+          <span class="stat-label">GPA at UIUC, Statistics &amp; CS</span>
+        </li>
+      </ul>
+    </section>
 
-  <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <div class="section-container">
-      <div class="about-details-container">
-        <div class="about-containers">
-          <!-- Personal Photo Gallery -->
-          <div class="photo-gallery">
-            <div class="photo-item">
-              <img src="assets/photo1.png" alt="Personal photo 1">
-            </div>
-            <div class="photo-item">
-              <img src="assets/photo3.png" alt="Personal photo 2">
-            </div>
-            <div class="photo-item">
-              <img src="assets/photo5.png" alt="Personal photo 3">
-            </div>
-            <div class="photo-item">
-              <img src="assets/photo7.png" alt="Personal photo 4">
-            </div>
-            <div class="photo-item">
-              <img src="assets/photo2.png" alt="Personal photo 5">
-            </div>
-            <div class="photo-item">
-              <img src="assets/photo6.png" alt="Personal photo 6">
-            </div>
-            <div class="photo-item">
-              <img src="assets/photo4.png" alt="Personal photo 7">
-            </div>
-            <div class="photo-item">
-              <img src="assets/photo8.png" alt="Personal photo 8">
-            </div>
-          </div>
-        </div>
-        <div class="text-container">
-          <p>
-            I'm a data enthusiast with a sharp eye for patterns and a soft spot for pink(obvious right?).
-            As a junior at the University of Chicago studying Statistics, I spend my weekdays exploring datasets📊,
-            and my weekends experimenting with new recipes in cooking 🍳 and baking 🍰.
-          </p>
-          <p>
-            I love building pipelines that give messy data meanings.
-            The experience that I enjoy the most is using machine learning models to create predictions while binge
-            eating Reese's peanut butter cups.
-            I’m driven by curiosity and a need to figure things out (and chocolates🍫).
-            Fun fact: I once tracked the number of peanut butter cups I ate each week for two months and tried to
-            predict my consumption for the following two weeks.
-            Unfortunately, I ended up eating 200% more than the model predicted, mostly because it was finals week 🥲.
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section id="experience" class="section">
+      <header class="section-head reveal">
+        <p class="kicker">My Professional</p>
+        <h2 class="title">Experience</h2>
+        <p class="section-hint hint-desktop">Click a milestone, or use the ← → keys</p>
+      </header>
 
-          </p>
-          <p>
-            I’m looking to bring my analytical skills, technical training, and creative mindset into the data science
-            world—somewhere I can keep learning
-            , keep building, and maybe even bring baked goods to the office.
-          </p>
-        </div>
-      </div>
-    </div>
-    <a href="#work-experience">
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" />
-    </a>
-  </section>
-
-  <section id="work-experience">
-    <p class="section__text__p1">My Professional</p>
-    <h1 class="title">Experience</h1>
-    <p class="timeline-hint">Hover a dot to expand</p>
-    <div class="timeline-wrapper">
-      <div class="timeline-track"></div>
-      <div class="timeline-items">
-
-        <!-- PwC -->
-        <div class="timeline-item">
-          <div class="timeline-label">
-            <p class="tl-date">Jul–Aug 2023</p>
-            <p class="tl-company">PwC</p>
-            <p class="tl-role">Core Assurance Intern</p>
-          </div>
-          <div class="timeline-dot"></div>
-          <div class="popup-space">
-            <div class="timeline-popup">
-              <p class="popup-meta">Jul. 2023 – Aug. 2023 · Shanghai, China</p>
-              <h3 class="popup-company">PricewaterhouseCoopers</h3>
-              <p class="popup-role">Core Assurance Intern</p>
-              <ul class="popup-bullets">
-                <li>Automated data cleaning and validation using Python, improving data quality and cutting auditor
-                  review time</li>
-                <li>Created 5+ Excel dashboards to visualize revenue sheets, supporting audit investigations</li>
-              </ul>
-              <p class="popup-tools">Excel · NumPy · Pandas</p>
-            </div>
-          </div>
+      <div class="timeline reveal" data-timeline>
+        <div class="tl-nodes" role="tablist" aria-label="Experience timeline">
+          <div class="tl-track" aria-hidden="true"><span class="tl-fill"></span></div>
+          <button class="tl-node" type="button" role="tab" id="tab-pwc" aria-controls="exp-pwc" aria-selected="false" tabindex="-1">
+            <span class="tl-label">
+              <span class="tl-date">Jul–Aug 2023</span>
+              <span class="tl-company">PwC</span>
+              <span class="tl-role">Core Assurance Intern</span>
+            </span>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <span class="tl-metric">5+ dashboards</span>
+          </button>
+          <button class="tl-node" type="button" role="tab" id="tab-marmon" aria-controls="exp-marmon" aria-selected="false" tabindex="-1">
+            <span class="tl-label">
+              <span class="tl-date">Jun–Aug 2024</span>
+              <span class="tl-company">Marmon Holdings</span>
+              <span class="tl-role">BI Intern</span>
+            </span>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <span class="tl-metric">−75% manual work</span>
+          </button>
+          <button class="tl-node" type="button" role="tab" id="tab-dsi" aria-controls="exp-dsi" aria-selected="false" tabindex="-1">
+            <span class="tl-label">
+              <span class="tl-date">Jun–Aug 2025</span>
+              <span class="tl-company">UChicago DSI</span>
+              <span class="tl-role">Research Assistant</span>
+            </span>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <span class="tl-metric">+54% F1 vs GPT-4o</span>
+          </button>
+          <button class="tl-node" type="button" role="tab" id="tab-ant" aria-controls="exp-ant" aria-selected="false" tabindex="-1">
+            <span class="tl-label">
+              <span class="tl-date">Aug–Sep 2025</span>
+              <span class="tl-company">Ant Group</span>
+              <span class="tl-role">Data Science Intern</span>
+            </span>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <span class="tl-metric">12K+ records</span>
+          </button>
+          <button class="tl-node" type="button" role="tab" id="tab-bofa" aria-controls="exp-bofa" aria-selected="true" tabindex="0">
+            <span class="tl-label">
+              <span class="tl-date">Jan–Mar 2026</span>
+              <span class="tl-company">Bank of America</span>
+              <span class="tl-role">Quant Researcher</span>
+            </span>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <span class="tl-metric">30× faster</span>
+          </button>
         </div>
 
-        <!-- Marmon Holdings -->
-        <div class="timeline-item">
-          <div class="timeline-label">
-            <p class="tl-date">Jun–Aug 2024</p>
-            <p class="tl-company">Marmon Holdings</p>
-            <p class="tl-role">BI Intern</p>
-          </div>
-          <div class="timeline-dot"></div>
-          <div class="popup-space">
-            <div class="timeline-popup">
-              <p class="popup-meta">Jun. 2024 – Aug. 2024 · Skokie, IL</p>
-              <h3 class="popup-company">Marmon Holdings</h3>
-              <p class="popup-role">Business Intelligence Intern</p>
-              <ul class="popup-bullets">
-                <li>Forecasted 110% warehouse overflow within 3 months with ARIMA time-series, preventing supply chain
-                  disruptions</li>
-                <li>Implemented an ETL process to centralize outsourced data, enabling cross-unit performance
-                  comparisons for leadership</li>
-                <li>Automated POS data processing with Python multiprocessing pipeline, reducing manual workload by 75%
+        <div class="tl-panels">
+          <!-- PwC -->
+          <article class="tl-panel card" id="exp-pwc" role="tabpanel" aria-labelledby="tab-pwc" data-item="PwC · Core Assurance Intern"
+            data-skills="python pandas numpy excel">
+            <div class="tl-side">
+              <div class="tl-who">
+                <span class="monogram" aria-hidden="true">PwC</span>
+                <div>
+                  <h3 class="tl-co">PricewaterhouseCoopers</h3>
+                  <p class="tl-ro">Core Assurance Intern</p>
+                </div>
+              </div>
+              <p class="tl-meta">Jul 2023 – Aug 2023 · Shanghai, China</p>
+              <div class="impact"><span class="impact-value">5+</span><span class="impact-label">Excel dashboards built to
+                  support audit investigations</span></div>
+            </div>
+            <div class="tl-main">
+              <ul class="bullets">
+                <li>Automated data cleaning and validation in <strong>Python</strong>, improving data quality and cutting
+                  auditor review time</li>
+                <li>Built <strong>5+ Excel dashboards</strong> visualizing revenue sheets to support audit investigations
                 </li>
               </ul>
-              <p class="popup-tools">Python · SQL · Power BI · ERP</p>
+              <ul class="chips" aria-label="Tools">
+                <li>Python</li><li>pandas</li><li>NumPy</li><li>Excel</li>
+              </ul>
             </div>
-          </div>
-        </div>
+          </article>
 
-        <!-- UChicago DSI -->
-        <div class="timeline-item">
-          <div class="timeline-label">
-            <p class="tl-date">Jun–Aug 2025</p>
-            <p class="tl-company">UChicago DSI</p>
-            <p class="tl-role">Research Assistant</p>
-          </div>
-          <div class="timeline-dot"></div>
-          <div class="popup-space">
-            <div class="timeline-popup">
-              <p class="popup-meta">Jun. 2025 – Aug. 2025 · Chicago, IL</p>
-              <h3 class="popup-company">UChicago Data Science Institute</h3>
-              <p class="popup-role">Research Assistant</p>
-              <ul class="popup-bullets">
-                <li>Fine-tuned 5 LLMs for offense detection, achieving 94% accuracy; benchmarked against GPT-4o
-                  few-shots, showed 54% F1 score increase</li>
-                <li>Conducted model evaluation on humor classification, reduced false positives by 22% with data
+          <!-- Marmon -->
+          <article class="tl-panel card" id="exp-marmon" role="tabpanel" aria-labelledby="tab-marmon"
+            data-item="Marmon Holdings · BI Intern" data-skills="python sql powerbi timeseries etl">
+            <div class="tl-side">
+              <div class="tl-who">
+                <span class="monogram" aria-hidden="true">M</span>
+                <div>
+                  <h3 class="tl-co">Marmon Holdings</h3>
+                  <p class="tl-ro">Business Intelligence Intern</p>
+                </div>
+              </div>
+              <p class="tl-meta">Jun 2024 – Aug 2024 · Skokie, IL · A Berkshire Hathaway company</p>
+              <div class="impact"><span class="impact-value">75%</span><span class="impact-label">less manual work on
+                  point-of-sale data processing</span></div>
+            </div>
+            <div class="tl-main">
+              <ul class="bullets">
+                <li>Forecast a <strong>110% warehouse overflow</strong> three months ahead with ARIMA time-series models,
+                  heading off supply-chain disruption</li>
+                <li>Built an <strong>ETL process</strong> that centralized outsourced data so leadership could compare
+                  performance across business units</li>
+                <li>Automated POS data processing with a multiprocessing Python pipeline, <strong>cutting manual work
+                    75%</strong></li>
+              </ul>
+              <ul class="chips" aria-label="Tools">
+                <li>Python</li><li>SQL</li><li>Power BI</li><li>ARIMA</li><li>ERP</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- DSI -->
+          <article class="tl-panel card" id="exp-dsi" role="tabpanel" aria-labelledby="tab-dsi"
+            data-item="UChicago DSI · Research Assistant" data-skills="python pytorch huggingface llm nlp">
+            <div class="tl-side">
+              <div class="tl-who">
+                <span class="monogram" aria-hidden="true">DSI</span>
+                <div>
+                  <h3 class="tl-co">UChicago Data Science Institute</h3>
+                  <p class="tl-ro">Research Assistant</p>
+                </div>
+              </div>
+              <p class="tl-meta">Jun 2025 – Aug 2025 · Chicago, IL</p>
+              <div class="impact"><span class="impact-value">94%</span><span class="impact-label">accuracy from 5
+                  fine-tuned LLMs for offense detection</span></div>
+            </div>
+            <div class="tl-main">
+              <ul class="bullets">
+                <li>Fine-tuned <strong>5 LLMs</strong> for offense detection, reaching <strong>94% accuracy</strong>;
+                  they beat GPT-4o few-shot by <strong>54% in F1</strong></li>
+                <li>Evaluated humor-classification models and <strong>cut false positives 22%</strong> with data
                   augmentation</li>
-                <li>Designed schema and led annotation of ~2.5k jokes; documented reproducible training pipelines</li>
+                <li>Designed the annotation schema and led labeling of <strong>~2.5K jokes</strong>; documented
+                  reproducible training pipelines</li>
               </ul>
-              <p class="popup-tools">PyTorch · HuggingFace · GPT-4o</p>
+              <ul class="chips" aria-label="Tools">
+                <li>PyTorch</li><li>Hugging Face</li><li>GPT-4o</li><li>NLP</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Ant Group -->
+          <article class="tl-panel card" id="exp-ant" role="tabpanel" aria-labelledby="tab-ant"
+            data-item="Ant Group · Data Science Intern" data-skills="python pandas numpy tensorflow llm econometrics etl">
+            <div class="tl-side">
+              <div class="tl-who">
+                <span class="monogram" aria-hidden="true">Ant</span>
+                <div>
+                  <h3 class="tl-co">Ant Group</h3>
+                  <p class="tl-ro">Data Science Intern</p>
+                </div>
+              </div>
+              <p class="tl-meta">Aug 2025 – Sep 2025 · Shanghai, China</p>
+              <div class="impact"><span class="impact-value">12,140+</span><span class="impact-label">Alipay survey
+                  records engineered and segmented</span></div>
+            </div>
+            <div class="tl-main">
+              <ul class="bullets">
+                <li>Engineered <strong>12,140+</strong> Alipay questionnaire records and segmented age-specific consumption
+                  patterns</li>
+                <li>Architected an automated ML pipeline with <strong>DeepSeek</strong> that retrains the
+                  consumption-preference recommendation model every quarter</li>
+                <li>Built an econometric + AI pipeline quantifying AI's impact on <strong>Total Factor
+                    Productivity</strong> across industries</li>
+              </ul>
+              <ul class="chips" aria-label="Tools">
+                <li>Python</li><li>pandas</li><li>NumPy</li><li>TensorFlow</li><li>DeepSeek</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Bank of America -->
+          <article class="tl-panel card is-active" id="exp-bofa" role="tabpanel" aria-labelledby="tab-bofa"
+            data-item="Bank of America · Quant Researcher" data-skills="python llm langchain rag nlp">
+            <div class="tl-side">
+              <div class="tl-who">
+                <span class="monogram" aria-hidden="true">BofA</span>
+                <div>
+                  <h3 class="tl-co">Bank of America × UChicago Project Lab</h3>
+                  <p class="tl-ro">Quantitative Researcher</p>
+                </div>
+              </div>
+              <p class="tl-meta">Jan 2026 – Mar 2026 · Chicago, IL</p>
+              <div class="impact"><span class="impact-value">30×</span><span class="impact-label">faster document
+                  preprocessing than the sequential baseline</span></div>
+            </div>
+            <div class="tl-main">
+              <ul class="bullets">
+                <li>Engineered an end-to-end <strong>AI agent</strong> (LangChain, Mistral 14B) that automates QA/QC of
+                  regulatory credit memos</li>
+                <li>Architected a parallel OCR + .docx parsing pipeline with <strong>30× lower preprocessing
+                    latency</strong> than sequential baselines</li>
+                <li>Built NLP rules that extract key debt metrics <strong>with source citations</strong> and generate Excel
+                  reports for credit analytics</li>
+              </ul>
+              <ul class="chips" aria-label="Tools">
+                <li>Python</li><li>LangChain</li><li>Ollama</li><li>RAG</li><li>OCR</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="tl-controls" aria-hidden="true">
+          <button class="icon-btn" type="button" data-tl-prev tabindex="-1" aria-label="Previous role"><svg class="i"><use href="#i-chevron-left" /></svg></button>
+          <span class="tl-count"><span data-tl-current>5</span> / 5</span>
+          <button class="icon-btn" type="button" data-tl-next tabindex="-1" aria-label="Next role"><svg class="i"><use href="#i-chevron-right" /></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" class="section">
+      <header class="section-head reveal">
+        <p class="kicker">Browse My Recent</p>
+        <h2 class="title">Projects</h2>
+      </header>
+
+      <div id="featured" class="featured">
+        <!-- Agenthon Track 2 -->
+        <article class="feature feature-wide card spot reveal" id="agenthon-t2" data-item="Agenthon 2026 · Forecasting agent (1st)"
+          data-skills="python numpy pandas timeseries garch probabilistic docker">
+          <div class="feature-visual">
+            <figure class="fan" data-fan>
+              <div class="fan-head">
+                <figcaption class="fan-title">Joint predictive draws <span class="muted">· illustration on synthetic
+                    data</span></figcaption>
+                <div class="fan-controls">
+                  <label class="switch">
+                    <input type="checkbox" data-fan-event checked>
+                    <span class="switch-ui" aria-hidden="true"></span>
+                    <span>FOMC day</span>
+                  </label>
+                  <button class="btn-chip" type="button" data-fan-resample>
+                    <svg class="i" aria-hidden="true"><use href="#i-refresh" /></svg> Resample
+                  </button>
+                </div>
+              </div>
+              <div class="fan-canvas-wrap">
+                <canvas role="img"
+                  aria-label="Fan chart: a price history followed by a widening forecast fan of simulated paths, with 50% and 90% bands and a variance bump on an FOMC decision day."></canvas>
+                <div class="fan-tooltip" hidden></div>
+              </div>
+              <ul class="fan-legend" aria-hidden="true">
+                <li><span class="key key-line key-ink"></span>History</li>
+                <li><span class="key key-line key-accent"></span>Median</li>
+                <li><span class="key key-band key-band-50"></span>50% band</li>
+                <li><span class="key key-band key-band-90"></span>90% band</li>
+              </ul>
+              <table class="sr-only" data-fan-table>
+                <caption>Forecast quantiles by horizon (synthetic illustration)</caption>
+                <thead><tr><th scope="col">Horizon</th><th scope="col">5%</th><th scope="col">Median</th><th scope="col">95%</th></tr></thead>
+                <tbody></tbody>
+              </table>
+            </figure>
+          </div>
+          <div class="feature-body">
+            <div class="badges">
+              <span class="rank rank-gold"><span aria-hidden="true">🏆</span> 1st of 87 teams</span>
+              <span class="tag">NeurIPS 2026 Competition Track</span>
+            </div>
+            <h3 class="feature-title">Agenthon 2026: Probabilistic Forecasting Agent</h3>
+            <p class="feature-sub">Track 2 · Team Sitadel Insecurities · Sponsored by NVIDIA, Bloomberg &amp;
+              AllianceBernstein</p>
+            <p class="feature-desc">Given dated market panels, a text corpus and an as-of date, our agent writes joint
+              probabilistic forecasts for U.S. Treasury yields, G10 and emerging-market FX, and monthly CPI/PCE releases.
+              It finished first on a sealed final week that nobody could see in advance.</p>
+            <ul class="points">
+              <li>Outscored every standard method we benchmarked (GARCH-t, GJR-GARCH, filtered historical simulation,
+                HAR) across <strong>4,752</strong> final-like backtest cards</li>
+              <li>On CPI-index backtest cards: <strong>0.85</strong> vs AutoARIMA's 0.99 and the official baseline's 1.80
+                (lower is better)</li>
+              <li><strong>Zero LLM calls</strong> in the final entry: bootstrapped volatility-regime paths, FOMC/ECB/BoJ
+                event-day variance, bridge-regression nowcasts</li>
+              <li>Fully reproducible: pinned Docker image, SHA-256 checksums and a provenance record for every fitted
+                constant</li>
+            </ul>
+            <ul class="chips" aria-label="Stack">
+              <li>Python</li><li>NumPy</li><li>pandas</li><li>GARCH / FHS</li><li>Time series</li><li>Docker</li>
+            </ul>
+            <div class="feature-links">
+              <button class="btn btn-dark btn-sm" type="button" data-case="case-t2" data-track="case_t2">Case study</button>
+              <a class="btn btn-outline btn-sm" href="https://github.com/scarletthejiaqi/agenthon2026-t2-forecasting"
+                target="_blank" rel="noopener" data-track="code_t2"><svg class="i" aria-hidden="true"><use href="#i-github" /></svg> Code</a>
+              <a class="text-link" href="https://www.agenthon.net/#leaderboard" target="_blank" rel="noopener"
+                data-track="leaderboard_t2">Leaderboard <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right" /></svg></a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- AntGroup -->
-        <div class="timeline-item">
-          <div class="timeline-label">
-            <p class="tl-date">Aug–Sep 2025</p>
-            <p class="tl-company">AntGroup</p>
-            <p class="tl-role">Data Science Intern</p>
-          </div>
-          <div class="timeline-dot"></div>
-          <div class="popup-space">
-            <div class="timeline-popup">
-              <p class="popup-meta">Aug. 2025 – Sep. 2025 · Shanghai, China</p>
-              <h3 class="popup-company">AntGroup</h3>
-              <p class="popup-role">Data Science Intern</p>
-              <ul class="popup-bullets">
-                <li>Extracted and engineered 12,140+ Alipay questionnaire records; segmented age-specific consumption
-                  patterns and built an automated ML pipeline with DeepSeek to retrain preference models quarterly</li>
-                <li>Built econometric + AI pipeline to quantify AI's impact on Total Factor Productivity (TFP) across
-                  industries</li>
-              </ul>
-              <p class="popup-tools">NumPy · Pandas · TensorFlow · DeepSeek</p>
+        <div class="feature-pair">
+          <!-- Agenthon Track 4 -->
+          <article class="feature card spot reveal" id="agenthon-t4" data-item="Agenthon 2026 · Evidence-grounded LLM analyst (4th)"
+            data-skills="python llm rag nlp docker timeseries">
+            <div class="feature-visual feature-visual-sm">
+              <div class="pipeline" aria-hidden="true">
+                <div class="pipe-step pipe-retrieve">
+                  <div class="pipe-icon doc">
+                    <i></i><i></i><i class="hl"></i><i></i><i class="short"></i>
+                  </div>
+                  <span class="pipe-label">Retrieve</span>
+                  <span class="pipe-sub">BM25 over documents</span>
+                </div>
+                <div class="pipe-link"><span class="pipe-pulse"></span></div>
+                <div class="pipe-step pipe-forecast">
+                  <div class="pipe-icon interval">
+                    <span class="iv-line"></span><span class="iv-point"></span>
+                  </div>
+                  <span class="pipe-label">Forecast</span>
+                  <span class="pipe-sub">LLM + statistics</span>
+                </div>
+                <div class="pipe-link"><span class="pipe-pulse"></span></div>
+                <div class="pipe-step pipe-verify">
+                  <div class="pipe-icon claim">
+                    <span class="claim-line"></span><span class="claim-line short"></span>
+                    <span class="claim-check"><svg class="i"><use href="#i-check" /></svg></span>
+                  </div>
+                  <span class="pipe-label">Verify</span>
+                  <span class="pipe-sub">NLI-checked quotes</span>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Bank of America -->
-        <div class="timeline-item">
-          <div class="timeline-label">
-            <p class="tl-date">Jan–Mar 2026</p>
-            <p class="tl-company">Bank of America</p>
-            <p class="tl-role">Quant Researcher</p>
-          </div>
-          <div class="timeline-dot"></div>
-          <div class="popup-space">
-            <div class="timeline-popup popup-align-right">
-              <p class="popup-meta">Jan. 2026 – Mar. 2026 · Chicago, IL</p>
-              <h3 class="popup-company">Bank of America Project Lab</h3>
-              <p class="popup-role">Quantitative Researcher</p>
-              <ul class="popup-bullets">
-                <li>Engineered an end-to-end AI agent (LangChain, Mistral 14B) automating regulatory credit memo QA/QC
-                </li>
-                <li>Architected a parallel OCR + docx parsing pipeline, reducing preprocessing latency by 30× over
-                  sequential baselines</li>
-                <li>Developed NLP rules extracting key debt metrics with source citations, generating Excel reports for
-                  credit analytics</li>
+            <div class="feature-body">
+              <div class="badges">
+                <span class="rank rank-silver">4th of 63 teams</span>
+                <span class="tag">NeurIPS 2026 Competition Track</span>
+              </div>
+              <h3 class="feature-title">Agenthon 2026: Evidence-Grounded LLM Analyst</h3>
+              <p class="feature-sub">Track 4 Explainability · Team Sitadel Insecurities</p>
+              <p class="feature-desc">Reads a corpus of financial documents, forecasts each entity's target with a
+                calibrated 90% interval, and backs every claim with a verbatim quote that an NLI judge verifies.</p>
+              <ul class="points">
+                <li><strong>BM25 retrieval</strong> written from scratch, feeding the competition's LLM under a hard
+                  25-request budget</li>
+                <li>Blends LLM reads <strong>50/50</strong> with statistical forecasts backtested on each entity's own
+                  history</li>
+                <li><strong>Can't fail:</strong> writes a checked fallback answer before any network call, then runs the
+                  official scorer's checks and drops unsupported claims</li>
               </ul>
-              <p class="popup-tools">Python · Ollama · LangChain · RAG</p>
+              <ul class="chips" aria-label="Stack">
+                <li>Python</li><li>LLM agents</li><li>Retrieval</li><li>NLI</li><li>Docker</li>
+              </ul>
+              <div class="feature-links">
+                <button class="btn btn-dark btn-sm" type="button" data-case="case-t4" data-track="case_t4">Case study</button>
+                <a class="text-link" href="https://www.agenthon.net/#leaderboard" target="_blank" rel="noopener"
+                  data-track="leaderboard_t4">Leaderboard <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right" /></svg></a>
+              </div>
             </div>
-          </div>
-        </div>
+          </article>
 
+          <!-- Fraud detection -->
+          <article class="feature card spot reveal" style="--d:100ms" id="fraud" data-item="Payment fraud detection pipeline"
+            data-skills="python xgboost lightgbm shap mlflow onnx sklearn pandas">
+            <div class="feature-visual feature-visual-sm">
+              <div class="metrics" data-metrics>
+                <div class="metrics-head">
+                  <span class="metrics-title">Holdout metrics · chronological split</span>
+                  <div class="segmented" role="group" aria-label="Choose model">
+                    <button type="button" data-model="xgb" aria-pressed="false">XGBoost</button>
+                    <button type="button" data-model="lgbm" aria-pressed="false">LightGBM</button>
+                    <button type="button" data-model="ens" aria-pressed="true" class="is-active">Ensemble</button>
+                  </div>
+                </div>
+                <div class="metric-rows"></div>
+                <div class="metrics-tooltip" hidden></div>
+              </div>
+            </div>
+            <div class="feature-body">
+              <div class="badges">
+                <span class="tag">Production ML</span>
+              </div>
+              <h3 class="feature-title">Payment Fraud Detection Pipeline</h3>
+              <p class="feature-sub">Personal project · 590K e-commerce transactions (IEEE-CIS), 3.5% fraud</p>
+              <p class="feature-desc">Flags fraudulent payments with an XGBoost + LightGBM ensemble: <strong>0.91 AUC</strong>
+                on a chronological holdout of the most recent 20% of transactions, tracked in MLflow and exported to ONNX
+                for fast CPU inference.</p>
+              <ul class="points">
+                <li>Caught a too-good-to-be-true <strong>0.97 AUC</strong> caused by look-ahead leakage; a chronological
+                  80/20 split and train-only imputation gave an honest <strong>0.91</strong></li>
+                <li>Found LightGBM stopping after one boosting round (early stopping watched log-loss on rare fraud);
+                  <code>scale_pos_weight</code> + AUC early stopping let it train fully</li>
+                <li>F1-optimal alert threshold (~0.8, not the default 0.5) from the precision–recall curve; SHAP to
+                  explain what drives fraud scores</li>
+              </ul>
+              <ul class="chips" aria-label="Stack">
+                <li>XGBoost</li><li>LightGBM</li><li>SHAP</li><li>MLflow</li><li>ONNX</li>
+              </ul>
+              <div class="feature-links">
+                <button class="btn btn-dark btn-sm" type="button" data-case="case-fraud" data-track="case_fraud">Case study</button>
+                <a class="btn btn-outline btn-sm" href="https://github.com/scarletthejiaqi/Fraud-detection-pipeline"
+                  target="_blank" rel="noopener" data-track="code_fraud"><svg class="i" aria-hidden="true"><use href="#i-github" /></svg> Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-    <a href="#projects">
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" />
-    </a>
-  </section>
 
-  <section id="projects">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-
-        <div class="details-container color-container project-card-centered"
-          style="display:flex;flex-direction:column;">
-          <div class="article-container image-container-centered">
-            <img src="./assets/bias.png" alt="Humor Bias Detection" class="project-img"
-              style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
-          </div>
-          <h2 class="experience-sub-title project-title project-title-centered">Humor Bias Detection</h2>
-          <div class="btn-container btn-container-centered" style="margin-top:auto;">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/scarletthejiaqi/humor_bias_detection'">
-              Github
-            </button>
+      <!-- More projects -->
+      <div class="more-projects">
+        <div class="more-head reveal">
+          <h3 class="subhead">More projects</h3>
+          <div class="filters" role="group" aria-label="Filter projects">
+            <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter" type="button" data-filter="ml" aria-pressed="false">ML &amp; NLP</button>
+            <button class="filter" type="button" data-filter="quant" aria-pressed="false">Quant</button>
+            <button class="filter" type="button" data-filter="analytics" aria-pressed="false">Analytics</button>
+            <button class="filter" type="button" data-filter="apps" aria-pressed="false">Apps</button>
           </div>
         </div>
 
-        <div class="details-container color-container project-card-centered"
-          style="display:flex;flex-direction:column;">
-          <div class="article-container image-container-centered">
-            <img src="./assets/arbitrage.png" alt="Volatility Arbitrage" class="project-img"
-              style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
-          </div>
-          <h2 class="experience-sub-title project-title project-title-centered">Volatility Arbitrage</h2>
-          <div class="btn-container btn-container-centered" style="margin-top:auto;">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/scarletthejiaqi/Volatility-Arbitrage'">
-              Github
-            </button>
-          </div>
-        </div>
+        <ul class="project-grid">
+          <li class="project card spot reveal" id="proj-humor" data-cats="ml" data-item="Humor bias detection"
+            data-skills="python pytorch huggingface nlp">
+            <div class="cover cover-1" aria-hidden="true">
+              <svg viewBox="0 0 320 140">
+                <path d="M92 30h96a14 14 0 0 1 14 14v34a14 14 0 0 1-14 14h-56l-22 18V92h-18a14 14 0 0 1-14-14V44a14 14 0 0 1 14-14z" fill="#fff" stroke="#2b2b2b" stroke-width="2" stroke-linejoin="round" />
+                <path d="M100 52h70M100 68h46" stroke="#2b2b2b" stroke-width="2" stroke-linecap="round" />
+                <rect x="212" y="34" width="78" height="24" rx="12" fill="#8a2be2" />
+                <text x="251" y="50" text-anchor="middle" fill="#fff" font-family="Poppins, sans-serif" font-size="11" font-weight="600">sarcasm</text>
+                <rect x="220" y="66" width="70" height="24" rx="12" fill="#fff" stroke="#2b2b2b" stroke-width="1.5" />
+                <text x="255" y="82" text-anchor="middle" fill="#2b2b2b" font-family="Poppins, sans-serif" font-size="11" font-weight="600">target</text>
+              </svg>
+            </div>
+            <div class="project-body">
+              <p class="project-meta">NLP research · 2025</p>
+              <h4 class="project-title">Humor Bias Detection</h4>
+              <p class="project-desc">Multi-label classification of bias type, target group and rhetorical device in
+                ~3K annotated jokes, fine-tuning DistilBERT, DeBERTa-v3, ELECTRA and RoBERTa.</p>
+              <ul class="chips chips-sm"><li>PyTorch</li><li>Hugging Face</li><li>NLP</li></ul>
+              <div class="project-links">
+                <a class="text-link" href="https://github.com/scarletthejiaqi/humor_bias_detection" target="_blank"
+                  rel="noopener" data-track="code_humor" aria-label="Humor Bias Detection on GitHub">GitHub <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right" /></svg></a>
+              </div>
+            </div>
+          </li>
 
-        <div class="details-container color-container project-card-centered"
-          style="display:flex;flex-direction:column;">
-          <div class="article-container image-container-centered">
-            <img src="./assets/project-2.png" alt="Project 2" class="project-img"
-              style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
-          </div>
-          <h2 class="experience-sub-title project-title project-title-centered">Interactive Voice Response System
-            Solutions</h2>
-          <div class="btn-container btn-container-centered" style="margin-top:auto;">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/scarletthejiaqi/IVR-System-Solutions'">
-              Github
-            </button>
-          </div>
-        </div>
+          <li class="project card spot reveal" style="--d:60ms" id="proj-volarb" data-cats="quant ml" data-item="Volatility arbitrage"
+            data-skills="python garch timeseries xgboost">
+            <div class="cover cover-2" aria-hidden="true">
+              <svg viewBox="0 0 320 140">
+                <path d="M20 84 C70 80 110 88 160 82 S250 78 300 82" fill="none" stroke="#2b2b2b" stroke-width="2" stroke-linecap="round" />
+                <path d="M20 96 L40 66 L60 92 L80 48 L100 82 L120 58 L140 102 L160 44 L180 78 L200 64 L220 96 L240 56 L260 82 L280 50 L300 72" fill="none" stroke="#8a2be2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+                <text x="300" y="104" text-anchor="end" fill="#2b2b2b" font-family="Poppins, sans-serif" font-size="11">implied vs. realized vol</text>
+              </svg>
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Quant research · team of 4</p>
+              <h4 class="project-title">Volatility Arbitrage</h4>
+              <p class="project-desc">Trades delta-hedged at-the-money SPX straddles when forecast realized volatility
+                diverges from implied, comparing LSTM, XGBoost, ARCH and GARCH forecasts in a backtest.</p>
+              <ul class="chips chips-sm"><li>Options</li><li>GARCH</li><li>LSTM</li><li>Backtesting</li></ul>
+              <div class="project-links">
+                <a class="text-link" href="https://github.com/scarletthejiaqi/Volatility-Arbitrage" target="_blank"
+                  rel="noopener" data-track="code_volarb" aria-label="Volatility Arbitrage on GitHub">GitHub <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right" /></svg></a>
+              </div>
+            </div>
+          </li>
 
-        <div class="details-container color-container project-card-centered"
-          style="display:flex;flex-direction:column;">
-          <div class="article-container image-container-centered">
-            <img src="./assets/project-1.png" alt="Project 1" class="project-img"
-              style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
-          </div>
-          <h2 class="experience-sub-title project-title project-title-centered">Human Reaction Time Analysis</h2>
-          <div class="btn-container btn-container-centered" style="margin-top:auto;">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/scarletthejiaqi/Reaction-Time-Analysis'">
-              Github
-            </button>
-          </div>
-        </div>
+          <li class="project card spot reveal" style="--d:120ms" id="proj-ivr" data-cats="ml analytics" data-item="IVR system optimization"
+            data-skills="python sklearn xgboost">
+            <div class="cover cover-3" aria-hidden="true">
+              <svg viewBox="0 0 320 140">
+                <g stroke="#2b2b2b" stroke-width="2" fill="none" stroke-linecap="round">
+                  <path d="M70 70 C110 70 110 40 150 40" /><path d="M70 70 C110 70 110 100 150 100" stroke="#8a2be2" />
+                  <path d="M160 40 C200 40 200 24 240 24" /><path d="M160 40 C200 40 200 56 240 56" />
+                  <path d="M160 100 C200 100 200 84 240 84" stroke="#8a2be2" /><path d="M160 100 C200 100 200 116 240 116" />
+                </g>
+                <g fill="#fff" stroke="#2b2b2b" stroke-width="2">
+                  <circle cx="64" cy="70" r="9" /><circle cx="155" cy="40" r="7" /><circle cx="246" cy="24" r="6" /><circle cx="246" cy="56" r="6" /><circle cx="246" cy="116" r="6" />
+                </g>
+                <g fill="#8a2be2"><circle cx="155" cy="100" r="7" /><circle cx="246" cy="84" r="6" /></g>
+                <text x="262" y="88" fill="#2b2b2b" font-family="Poppins, sans-serif" font-size="11" font-weight="600">89%</text>
+              </svg>
+            </div>
+            <div class="project-body">
+              <p class="project-meta">BZJ Datathon · 2024</p>
+              <h4 class="project-title">IVR System Optimization</h4>
+              <p class="project-desc">Random Forest and XGBoost on 200K+ call logs lifted agent-transfer routing precision
+                from 73% to 89%; the redesigned routing cut extra escalations by 3%.</p>
+              <ul class="chips chips-sm"><li>scikit-learn</li><li>XGBoost</li><li>Seaborn</li></ul>
+              <div class="project-links">
+                <a class="text-link" href="https://github.com/scarletthejiaqi/IVR-System-Solutions" target="_blank"
+                  rel="noopener" data-track="code_ivr" aria-label="IVR System Optimization on GitHub">GitHub <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right" /></svg></a>
+              </div>
+            </div>
+          </li>
 
-        <div class="details-container color-container project-card-centered"
-          style="display:flex;flex-direction:column;">
-          <div class="article-container image-container-centered">
-            <img src="./assets/project-3.png" alt="Project 3" class="project-img"
-              style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
-          </div>
-          <h2 class="experience-sub-title project-title project-title-centered">Salary Disparity between Job Titles</h2>
-          <div class="btn-container btn-container-centered" style="margin-top:auto;">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/scarletthejiaqi/Salary-Disparity-between-Job-Titiles'">
-              Github
-            </button>
-          </div>
-        </div>
+          <li class="project card spot reveal" id="proj-nutrition" data-cats="ml apps" data-item="Nutrition AI assistant"
+            data-skills="llm aws">
+            <div class="cover cover-4" aria-hidden="true">
+              <svg viewBox="0 0 320 140">
+                <circle cx="160" cy="70" r="48" fill="#fff" stroke="#2b2b2b" stroke-width="2" />
+                <circle cx="160" cy="70" r="31" fill="none" stroke="#efe3e7" stroke-width="10" />
+                <circle cx="160" cy="70" r="31" fill="none" stroke="#8a2be2" stroke-width="10" stroke-dasharray="88 107" transform="rotate(-90 160 70)" />
+                <circle cx="160" cy="70" r="31" fill="none" stroke="#2b2b2b" stroke-width="10" stroke-dasharray="46 149" stroke-dashoffset="-90" transform="rotate(-90 160 70)" />
+                <g stroke="#2b2b2b" stroke-width="2" stroke-linecap="round"><path d="M86 34v72M80 34v18a6 6 0 0 0 12 0V34" fill="none" /><path d="M234 34c8 6 8 30 0 36v36" fill="none" /></g>
+              </svg>
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Generative AI · 2024</p>
+              <h4 class="project-title">Nutrition AI Assistant</h4>
+              <p class="project-desc">iOS chatbot that estimates calories from meal photos (image recognition + an LLM)
+                on an AWS backend; validated on 500 hand-labeled meals and shipped to 10+ beta users.</p>
+              <ul class="chips chips-sm"><li>GenAI</li><li>Computer vision</li><li>AWS</li></ul>
+              <div class="project-links">
+                <a class="text-link" href="#contact">Ask me about it <svg class="i" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
+              </div>
+            </div>
+          </li>
 
-      </div>
-    </div>
-    <a href="#contact">
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" />
-    </a>
-  </section>
-  <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        <p><a href="mailto:scarlett_hjq@outlook.com">scarlett_hjq@outlook.com</a></p>
-      </div>
-      <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p><a href="https://www.linkedin.com/in/jiaqihe-stats">LinkedIn</a></p>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="project card spot reveal" style="--d:60ms" id="proj-scarlability" data-cats="apps" data-item="Scarlability (iPad & Mac app)"
+            data-skills="swift">
+            <div class="cover cover-5" aria-hidden="true">
+              <svg viewBox="0 0 320 140">
+                <rect x="96" y="16" width="128" height="108" rx="12" fill="#fff" stroke="#2b2b2b" stroke-width="2" />
+                <g stroke="#ecd4db" stroke-width="2"><path d="M110 46h100M110 66h100M110 86h100M110 106h100" /></g>
+                <path d="M114 62c8-16 16 12 24-2s16-14 22 0 14 12 22-4 12-6 18 4" fill="none" stroke="#8a2be2" stroke-width="3" stroke-linecap="round" />
+                <path d="M206 92l38-38 8 8-38 38-11 3z" fill="#fff" stroke="#2b2b2b" stroke-width="2" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="project-body">
+              <p class="project-meta">iPad &amp; Mac app · 2026</p>
+              <h4 class="project-title">Scarlability</h4>
+              <p class="project-desc">A free, open-source note-taking app: pressure-sensitive Apple Pencil ink, PDF
+                annotation, shape snapping and iCloud Drive sync, built in SwiftUI + UIKit.</p>
+              <ul class="chips chips-sm"><li>Swift</li><li>SwiftUI</li><li>iPadOS</li></ul>
+              <div class="project-links">
+                <a class="text-link" href="https://github.com/scarletthejiaqi/scarlability" target="_blank" rel="noopener"
+                  data-track="code_scarlability" aria-label="Scarlability on GitHub">GitHub <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right" /></svg></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="project card spot reveal" style="--d:120ms" id="proj-reaction" data-cats="analytics" data-item="Reaction time analysis"
+            data-skills="r econometrics">
+            <div class="cover cover-6" aria-hidden="true">
+              <svg viewBox="0 0 320 140">
+                <g fill="#2b2b2b" opacity=".85">
+                  <rect x="72" y="92" width="14" height="28" rx="3" /><rect x="90" y="62" width="14" height="58" rx="3" /><rect x="108" y="40" width="14" height="80" rx="3" />
+                  <rect x="126" y="48" width="14" height="72" rx="3" /><rect x="144" y="64" width="14" height="56" rx="3" /><rect x="162" y="78" width="14" height="42" rx="3" />
+                  <rect x="180" y="88" width="14" height="32" rx="3" /><rect x="198" y="96" width="14" height="24" rx="3" /><rect x="216" y="102" width="14" height="18" rx="3" /><rect x="234" y="108" width="14" height="12" rx="3" />
+                </g>
+                <path d="M68 112 C92 70 104 34 120 36 S170 72 200 94 S240 112 256 114" fill="none" stroke="#8a2be2" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Regression study · R</p>
+              <h4 class="project-title">Reaction Time Analysis</h4>
+              <p class="project-desc">What actually drives reaction time? Stepwise selection, diagnostics and a Box-Cox
+                transform showed device, eyesight, age and Wi-Fi matter more than sleep or caffeine.</p>
+              <ul class="chips chips-sm"><li>R</li><li>Regression</li><li>Box-Cox</li></ul>
+              <div class="project-links">
+                <a class="text-link" href="https://github.com/scarletthejiaqi/Reaction-Time-Analysis" target="_blank"
+                  rel="noopener" data-track="code_reaction" aria-label="Reaction Time Analysis on GitHub">GitHub <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right" /></svg></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="project card spot reveal" id="proj-salary" data-cats="analytics apps" data-item="Salary disparity explorer"
+            data-skills="r shiny">
+            <div class="cover cover-7" aria-hidden="true">
+              <svg viewBox="0 0 320 140">
+                <g fill="#2b2b2b" opacity=".8">
+                  <circle cx="64" cy="108" r="4" /><circle cx="82" cy="98" r="4" /><circle cx="96" cy="104" r="4" /><circle cx="112" cy="88" r="4" /><circle cx="126" cy="94" r="4" />
+                  <circle cx="142" cy="76" r="4" /><circle cx="158" cy="82" r="4" /><circle cx="172" cy="64" r="4" /><circle cx="190" cy="70" r="4" /><circle cx="204" cy="52" r="4" />
+                  <circle cx="220" cy="58" r="4" /><circle cx="236" cy="42" r="4" /><circle cx="252" cy="48" r="4" /><circle cx="266" cy="34" r="4" />
+                </g>
+                <path d="M56 110 C120 96 180 70 272 32" fill="none" stroke="#8a2be2" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Interactive app · R Shiny</p>
+              <h4 class="project-title">Salary Disparity Explorer</h4>
+              <p class="project-desc">Interactive app comparing salaries across job titles and years of experience, with
+                smoothed trend curves for well-sampled roles.</p>
+              <ul class="chips chips-sm"><li>R</li><li>Shiny</li><li>Data viz</li></ul>
+              <div class="project-links">
+                <a class="text-link" href="https://scarlett-hjq.shinyapps.io/Salary_Disparity_between_Job_Titles/"
+                  target="_blank" rel="noopener" data-track="demo_salary" aria-label="Salary Disparity Explorer live app">Live app <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right" /></svg></a>
+                <a class="text-link" href="https://github.com/scarletthejiaqi/Salary-Disparity-between-Job-Titiles"
+                  target="_blank" rel="noopener" data-track="code_salary" aria-label="Salary Disparity Explorer on GitHub">GitHub <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right" /></svg></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="project project-cta card reveal" style="--d:60ms" data-cats="all">
+            <a href="https://github.com/scarletthejiaqi" target="_blank" rel="noopener" data-track="github_all">
+              <svg class="cta-icon" aria-hidden="true"><use href="#i-github" /></svg>
+              <span class="cta-title">See everything on GitHub</span>
+              <span class="cta-sub">Notebooks, apps and experiments</span>
+              <span class="text-link">github.com/scarletthejiaqi <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right" /></svg></span>
+            </a>
+          </li>
         </ul>
       </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="section">
+      <header class="section-head reveal">
+        <p class="kicker">What I Work With</p>
+        <h2 class="title">Skills</h2>
+        <p class="section-hint">Tap a skill to see where I've used it</p>
+      </header>
+
+      <div class="skills-grid">
+        <div class="card skill-group reveal">
+          <h3>Languages</h3>
+          <ul class="skill-list">
+            <li><button type="button" class="skill" data-skill="python">Python</button></li>
+            <li><button type="button" class="skill" data-skill="r">R</button></li>
+            <li><button type="button" class="skill" data-skill="sql">SQL</button></li>
+            <li><button type="button" class="skill" data-skill="cpp" data-note="Coursework: Data Structures &amp; Algorithms and Systems Programming">C++</button></li>
+            <li><button type="button" class="skill" data-skill="swift">Swift</button></li>
+          </ul>
+        </div>
+        <div class="card skill-group skill-group-wide reveal" style="--d:60ms">
+          <h3>Machine learning &amp; AI</h3>
+          <ul class="skill-list">
+            <li><button type="button" class="skill" data-skill="pytorch">PyTorch</button></li>
+            <li><button type="button" class="skill" data-skill="tensorflow">TensorFlow</button></li>
+            <li><button type="button" class="skill" data-skill="sklearn">scikit-learn</button></li>
+            <li><button type="button" class="skill" data-skill="xgboost">XGBoost</button></li>
+            <li><button type="button" class="skill" data-skill="lightgbm">LightGBM</button></li>
+            <li><button type="button" class="skill" data-skill="huggingface">Hugging Face</button></li>
+            <li><button type="button" class="skill" data-skill="llm">LLM fine-tuning &amp; agents</button></li>
+            <li><button type="button" class="skill" data-skill="langchain">LangChain</button></li>
+            <li><button type="button" class="skill" data-skill="rag">RAG &amp; retrieval</button></li>
+            <li><button type="button" class="skill" data-skill="nlp">NLP</button></li>
+            <li><button type="button" class="skill" data-skill="shap">SHAP</button></li>
+          </ul>
+        </div>
+        <div class="card skill-group skill-group-wide reveal" style="--d:120ms">
+          <h3>Statistics &amp; quant</h3>
+          <ul class="skill-list">
+            <li><button type="button" class="skill" data-skill="timeseries">Time-series forecasting</button></li>
+            <li><button type="button" class="skill" data-skill="probabilistic">Probabilistic forecasting</button></li>
+            <li><button type="button" class="skill" data-skill="garch">GARCH &amp; volatility</button></li>
+            <li><button type="button" class="skill" data-skill="econometrics">Regression &amp; econometrics</button></li>
+            <li><button type="button" class="skill" data-skill="bayesian" data-note="Coursework: Bayesian Statistics (see the hierarchical-model sketch in my gallery)">Bayesian statistics</button></li>
+            <li><button type="button" class="skill" data-skill="stochastic" data-note="Coursework: Stochastic Processes">Stochastic processes</button></li>
+          </ul>
+        </div>
+        <div class="card skill-group reveal">
+          <h3>Data &amp; MLOps</h3>
+          <ul class="skill-list">
+            <li><button type="button" class="skill" data-skill="pandas">pandas</button></li>
+            <li><button type="button" class="skill" data-skill="numpy">NumPy</button></li>
+            <li><button type="button" class="skill" data-skill="etl">ETL pipelines</button></li>
+            <li><button type="button" class="skill" data-skill="docker">Docker</button></li>
+            <li><button type="button" class="skill" data-skill="mlflow">MLflow</button></li>
+            <li><button type="button" class="skill" data-skill="onnx">ONNX</button></li>
+            <li><button type="button" class="skill" data-skill="aws">AWS</button></li>
+          </ul>
+        </div>
+        <div class="card skill-group reveal" style="--d:60ms">
+          <h3>BI &amp; tools</h3>
+          <ul class="skill-list">
+            <li><button type="button" class="skill" data-skill="powerbi">Power BI</button></li>
+            <li><button type="button" class="skill" data-skill="excel">Excel</button></li>
+            <li><button type="button" class="skill" data-skill="shiny">R Shiny</button></li>
+            <li><button type="button" class="skill" data-skill="bloomberg" data-note="Bloomberg Market Concepts (BMC) certificate">Bloomberg (BMC)</button></li>
+          </ul>
+        </div>
+        <div class="card skill-insight reveal" style="--d:120ms" aria-live="polite">
+          <p class="insight-kicker">Where I've used it <span class="insight-hint">· tap any skill to switch</span></p>
+          <p class="insight-empty"><span class="insight-emoji" aria-hidden="true">👆</span> Pick any skill: I'll show you
+            exactly where I've used it, with links.</p>
+          <div class="insight-body" hidden>
+            <p class="insight-title"></p>
+            <ul class="insight-list"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section">
+      <header class="section-head reveal">
+        <p class="kicker">Get To Know More</p>
+        <h2 class="title">About Me</h2>
+      </header>
+
+      <div class="gallery-wrap reveal">
+        <div class="filters gallery-filters" role="group" aria-label="Filter photos">
+          <button class="filter is-active" type="button" data-gfilter="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-gfilter="weekday" aria-pressed="false"><span aria-hidden="true">📊</span> Weekdays</button>
+          <button class="filter" type="button" data-gfilter="weekend" aria-pressed="false"><span aria-hidden="true">🍰</span> Weekends</button>
+        </div>
+        <ul class="gallery">
+          <li data-kind="weekend"><button type="button" class="photo" data-full="assets/img/g-salad.webp" data-caption="Weekend brunch: salad, fried egg and a matcha latte"><img src="assets/img/g-salad-sm.webp" alt="Salad with a fried egg and a matcha latte" width="560" height="420" loading="lazy"></button></li>
+          <li data-kind="weekday"><button type="button" class="photo" data-full="assets/img/g-latent.webp" data-caption="Weekday: a 2-D latent space, colored by class"><img src="assets/img/g-latent-sm.webp" alt="Scatter plot of a two-dimensional latent space colored by class" width="560" height="536" loading="lazy"></button></li>
+          <li data-kind="weekend"><button type="button" class="photo" data-full="assets/img/g-tres-leches.webp" data-caption="Homemade tres leches with berries"><img src="assets/img/g-tres-leches-sm.webp" alt="Homemade tres leches cake with a strawberry and berries" width="560" height="560" loading="lazy"></button></li>
+          <li data-kind="weekday"><button type="button" class="photo" data-full="assets/img/g-ivr.webp" data-caption="Weekday: resolved-call rate by client (IVR datathon)"><img src="assets/img/g-ivr-sm.webp" alt="Bar chart of resolved-call rate by client from the IVR datathon" width="560" height="318" loading="lazy"></button></li>
+          <li data-kind="weekend"><button type="button" class="photo" data-full="assets/img/g-steak.webp" data-caption="Seared steak with vegetable fried rice"><img src="assets/img/g-steak-sm.webp" alt="Seared steak with vegetable fried rice" width="420" height="560" loading="lazy"></button></li>
+          <li data-kind="weekday"><button type="button" class="photo" data-full="assets/img/g-bayes.webp" data-caption="Weekday: sketching a hierarchical Bayesian model"><img src="assets/img/g-bayes-sm.webp" alt="Hand-drawn plate diagram of a hierarchical Bayesian model" width="560" height="465" loading="lazy"></button></li>
+          <li data-kind="weekend"><button type="button" class="photo" data-full="assets/img/g-stew.webp" data-caption="Slow-cooked stew night"><img src="assets/img/g-stew-sm.webp" alt="Beef stew with carrots and potatoes in a pot" width="420" height="560" loading="lazy"></button></li>
+          <li data-kind="weekday"><button type="button" class="photo" data-full="assets/img/g-garch.webp" data-caption="Weekday: GARCH conditional vs. historical volatility"><img src="assets/img/g-garch-sm.webp" alt="Line chart of GARCH conditional volatility versus historical volatility" width="560" height="354" loading="lazy"></button></li>
+        </ul>
+      </div>
+
+      <div class="about-grid">
+        <div class="card about-text reveal">
+          <p>I'm a data scientist with a sharp eye for patterns and a soft spot for pink (obvious, right?). I'm a senior at
+            the University of Chicago studying Statistics, graduating this December. I spend my weekdays exploring
+            datasets 📊 and my weekends experimenting with new recipes 🍳 and bakes 🍰.</p>
+          <p>I love building pipelines that give messy data meaning. What I enjoy most is building machine learning models
+            that make predictions, ideally while snacking on
+            <button type="button" class="egg" data-egg aria-label="Reese's peanut butter cups (surprise!)">Reese's peanut
+              butter cups</button>. I'm driven by curiosity and a need to figure things out (and chocolate 🍫). Fun fact: I
+            once tracked how many peanut butter cups I ate each week for two months and tried to forecast the next two
+            weeks. I ate 200% more than the model predicted, mostly because it was finals week 🥲. Lesson learned:
+            always model the regime change.</p>
+          <p>I'm looking to bring my analytical skills, technical training and creative mindset to a data science or quant
+            team: somewhere I can keep learning, keep building, and maybe even bring baked goods to the office.</p>
+        </div>
+        <aside class="about-side">
+          <ul class="card facts reveal" style="--d:80ms">
+            <li><span class="fact-emoji" aria-hidden="true">📍</span><span><strong>Based in Chicago</strong>; interned in
+                Chicago &amp; Shanghai</span></li>
+            <li><span class="fact-emoji" aria-hidden="true">🎓</span><span><strong>Graduating Dec 2026</strong>, UChicago
+                Statistics</span></li>
+            <li><span class="fact-emoji" aria-hidden="true">🏆</span><span><strong>1st of 87</strong> at a NeurIPS 2026
+                competition</span></li>
+            <li><span class="fact-emoji" aria-hidden="true">🍰</span><span><strong>Weekend baker:</strong> tres leches
+                &amp; more</span></li>
+          </ul>
+          <div class="card leadership reveal" style="--d:140ms">
+            <p class="leader-kicker">Leadership</p>
+            <h3 class="leader-title"><span aria-hidden="true">🏓</span> UChicago Table Tennis Club</h3>
+            <p class="leader-role">Vice President &amp; Treasurer · May 2025 – present</p>
+            <p class="leader-role">Team Leader, Women's NCTTA Team</p>
+            <ul class="bullets">
+              <li>Grew membership <strong>30% year over year</strong> by running the club's social media</li>
+              <li>Led fundraising that raised <strong>$3,000+</strong> for events and NCTTA competitions</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="section">
+      <header class="section-head reveal">
+        <p class="kicker">Get in Touch</p>
+        <h2 class="title">Contact Me</h2>
+      </header>
+      <div class="card contact-card spot reveal">
+        <p class="contact-lead">I'm graduating in December 2026 and looking for full-time roles in <strong>data science,
+            quantitative research and machine learning</strong>. If you're hiring, or just want to talk forecasting, LLM
+          agents or baking, I'd love to hear from you.</p>
+        <div class="contact-pill">
+          <a class="contact-item" href="mailto:hjqscarlett@gmail.com" data-track="email_contact">
+            <svg class="i" aria-hidden="true"><use href="#i-mail" /></svg><span data-email-text>hjqscarlett@gmail.com</span>
+          </a>
+          <button class="copy-btn" type="button" data-copy-email data-track="copy_email_contact">
+            <svg class="i" aria-hidden="true"><use href="#i-copy" /></svg><span>Copy</span>
+          </button>
+          <span class="pill-divider" aria-hidden="true"></span>
+          <a class="contact-item" href="https://www.linkedin.com/in/jiaqihe-stats" target="_blank" rel="noopener"
+            data-track="linkedin_contact"><svg class="i" aria-hidden="true"><use href="#i-linkedin" /></svg>LinkedIn</a>
+          <a class="contact-item" href="https://github.com/scarletthejiaqi" target="_blank" rel="noopener"
+            data-track="github_contact"><svg class="i" aria-hidden="true"><use href="#i-github" /></svg>GitHub</a>
+        </div>
+        <a class="btn btn-dark" href="assets/Jiaqi_Scarlett_He_Resume.pdf"
+          target="_blank" rel="noopener" data-track="resume_contact"><svg class="i" aria-hidden="true"><use href="#i-file" /></svg> View my resume</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      <ul class="footer-links">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+    <p class="footer-note">© 2026 Jiaqi (Scarlett) He · Designed &amp; built from scratch with HTML, CSS &amp; vanilla
+      JavaScript</p>
+    <p class="footer-note footer-tip">Tip: press <kbd data-mod-key>⌘K</kbd> anywhere to jump around</p>
+    <a class="back-to-top" href="#top">Back to top ↑</a>
   </footer>
-  <script src="script.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+  <!-- ===================== OVERLAYS ===================== -->
+  <dialog class="palette" id="palette" aria-label="Quick actions">
+    <div class="palette-search">
+      <svg class="i" aria-hidden="true"><use href="#i-search" /></svg>
+      <input type="text" placeholder="Jump to a section or run an action…" aria-label="Search actions" role="combobox"
+        aria-expanded="true" aria-controls="palette-list" aria-autocomplete="list" autocomplete="off" spellcheck="false">
+      <kbd>esc</kbd>
+    </div>
+    <ul class="palette-list" id="palette-list" role="listbox" aria-label="Actions"></ul>
+    <p class="palette-foot"><kbd>↑</kbd><kbd>↓</kbd> navigate <kbd>↵</kbd> select</p>
+  </dialog>
 
-  <script>
-    VANTA.HALO({
-      el: "#vanta-bg",
-      amplitudeFactor: 3,
-      backgroundAlpha: 1,
-      backgroundColor: 0xFFC0CB,    // replace with your desired background color
-      baseColor: 0x1a59,
-      color2: 0xF2EAD5,
-      gyroControls: false,
-      minHeight: 200,
-      minWidth: 200,
-      mouseControls: false,
-      mouseEase: false,
-      ringFactor: 1,
-      rotationFactor: 1,
-      scale: 1,
-      scaleMobile: 1,
-      size: 3,
-      speed: 1,
-      touchControls: false,
-      xOffset: -0.01,
-      yOffset: 0
-    });
-  </script>
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <button class="lb-close icon-btn" type="button" data-close aria-label="Close"><svg class="i"><use href="#i-x" /></svg></button>
+    <button class="lb-prev icon-btn" type="button" data-lb-prev aria-label="Previous photo"><svg class="i"><use href="#i-chevron-left" /></svg></button>
+    <figure class="lb-figure">
+      <img alt="">
+      <figcaption></figcaption>
+    </figure>
+    <button class="lb-next icon-btn" type="button" data-lb-next aria-label="Next photo"><svg class="i"><use href="#i-chevron-right" /></svg></button>
+  </dialog>
 
+  <!-- Case study: Agenthon Track 2 -->
+  <dialog class="modal" id="case-t2" aria-labelledby="case-t2-title">
+    <div class="modal-inner">
+      <button class="modal-close icon-btn" type="button" data-close aria-label="Close"><svg class="i"><use href="#i-x" /></svg></button>
+      <p class="modal-kicker">Case study · NeurIPS 2026 Competition Track</p>
+      <h2 class="modal-title" id="case-t2-title">Agenthon 2026 Track 2: 1st of 87 teams</h2>
+      <ul class="modal-meta">
+        <li>Team Sitadel Insecurities</li>
+        <li>Sep – Oct 2026</li>
+        <li>Python · NumPy · pandas · Docker</li>
+      </ul>
 
+      <h3>The challenge</h3>
+      <p>Each “forecast card” holds dated data panels, a text corpus and an as-of date. The agent outputs thousands of
+        joint predictive draws for every target: U.S. Treasury yields from 3 months to 30 years, G10 and emerging-market
+        exchange rates, and the next print of monthly statistics such as CPI and PCE. Entries are scored on a CRPS,
+        variogram and tail-quantile composite, normalized against a published random-walk baseline, on a sealed final
+        week (forecasts made 26 Oct 2026 for 27–30 Oct).</p>
+
+      <h3>Approach</h3>
+      <ul class="modal-list">
+        <li><strong>Volatility that adapts.</strong> Variance starts from a blend of EWMA and long-run variance, then
+          mean-reverts. Each draw is one joint path for every asset and horizon.</li>
+        <li><strong>Tails from the data, not a Gaussian.</strong> Shocks are whole-date rows of vol-standardized
+          residuals, so fat tails and cross-asset dependence come from history; one volatility-regime multiplier per draw
+          is shared by all assets.</li>
+        <li><strong>Event-aware.</strong> FOMC, ECB and Bank of Japan decision days get variance multipliers fitted on 25
+          years of data; near an FOMC decision, part of the draws borrow residuals from past decision weeks.</li>
+        <li><strong>Nowcasts for data releases.</strong> Bridge regressions (e.g. PCE from the CPI already on the card), a
+          robust AR(1) with Huber month effects, and base-effect forecasts for annual rates.</li>
+        <li><strong>Can't crash.</strong> Every output is checked (finite values, spreads within a band of the
+          baseline's); failures fall back to the baseline, then a random walk.</li>
+      </ul>
+
+      <h3>Evidence before submitting</h3>
+      <p>We built our own local leaderboard: thousands of rolling-origin backtest cards from public history, scored with
+        the official scoring code. Head-to-head on 4,752 final-like daily cards during development (normalized score,
+        lower is better):</p>
+      <table class="modal-table">
+        <thead>
+          <tr><th scope="col">Method</th><th scope="col" class="num">Score</th></tr>
+        </thead>
+        <tbody>
+          <tr class="is-ours"><th scope="row">Our engine</th><td class="num">1.098</td></tr>
+          <tr><th scope="row">GARCH-t + event calendar (best rival)</th><td class="num">1.104</td></tr>
+          <tr><th scope="row">GJR-GARCH-t + event calendar</th><td class="num">1.105</td></tr>
+          <tr><th scope="row">Filtered historical simulation + calendar</th><td class="num">1.108</td></tr>
+          <tr><th scope="row">HAR + event calendar</th><td class="num">1.113</td></tr>
+        </tbody>
+      </table>
+      <p class="modal-note">On monthly statistic cards the gap is wider: CPI-index cards scored 0.852 vs AutoARIMA's 0.988
+        and the baseline's 1.800.</p>
+
+      <h3>Engineering</h3>
+      <p>Forecasts are deterministic across time zone, locale, hash seed and thread count, with no network access or
+        wall-clock reads. The submitted Docker image is public and byte-identical to the repository (SHA-256 checksums),
+        and a provenance file documents where every constant came from and why it was available before the forecast
+        date.</p>
+
+      <div class="modal-actions">
+        <a class="btn btn-dark btn-sm" href="https://github.com/scarletthejiaqi/agenthon2026-t2-forecasting" target="_blank"
+          rel="noopener" data-track="code_t2_modal"><svg class="i" aria-hidden="true"><use href="#i-github" /></svg> View the code</a>
+        <a class="btn btn-outline btn-sm" href="https://www.agenthon.net/#leaderboard" target="_blank" rel="noopener">Final
+          leaderboard <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right" /></svg></a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Case study: Agenthon Track 4 -->
+  <dialog class="modal" id="case-t4" aria-labelledby="case-t4-title">
+    <div class="modal-inner">
+      <button class="modal-close icon-btn" type="button" data-close aria-label="Close"><svg class="i"><use href="#i-x" /></svg></button>
+      <p class="modal-kicker">Case study · NeurIPS 2026 Competition Track</p>
+      <h2 class="modal-title" id="case-t4-title">Agenthon 2026 Track 4: 4th of 63 teams</h2>
+      <ul class="modal-meta">
+        <li>Team Sitadel Insecurities</li>
+        <li>Sep – Oct 2026</li>
+        <li>Python · LLM agents · Docker</li>
+      </ul>
+
+      <h3>The challenge</h3>
+      <p>Each unit gives a task (a roster of companies or series, a target and a cutoff date) plus an embargo-filtered
+        corpus of documents. For every entity the agent predicts a label, a point forecast and a 90% interval, then
+        justifies them with claims and reasons that quote the corpus verbatim. A pinned NLI model judges whether each
+        cited claim is actually supported.</p>
+
+      <h3>Approach</h3>
+      <ul class="modal-list">
+        <li><strong>Floor first.</strong> A schema-checked fallback answer is written before any network call. The LLM's
+          answer replaces it only if it passes the same checks, so a unit never scores as failed.</li>
+        <li><strong>Retrieval from scratch.</strong> BM25 over chunked documents in pure standard-library Python, plus
+          verbatim sentence spans for citations.</li>
+        <li><strong>Budgeted LLM reads.</strong> Several reads per batch from the competition's House model under a hard
+          23-of-25 request budget and a per-unit deadline, with JSON repair and no blind retries.</li>
+        <li><strong>Statistics + LLM.</strong> Where a target has history, a rolling-origin backtest picks the best simple
+          forecaster; the LLM's median is blended 50/50 with it, and intervals are widened ×1.4 for known LLM
+          under-coverage.</li>
+        <li><strong>Self-verification.</strong> Before writing, the agent runs the official scorer's checks and drops any
+          claim that would fail.</li>
+      </ul>
+
+      <h3>How we iterated</h3>
+      <p>11 versions in 12 days, each change A/B-tested on practice units. Some ideas were rejected on evidence: “thinking
+        mode” gave no score gain and truncated replies on 6 of 11 units, so it shipped switched off.</p>
+
+      <div class="modal-actions">
+        <a class="btn btn-dark btn-sm" href="https://www.agenthon.net/#leaderboard" target="_blank" rel="noopener">Final
+          leaderboard <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right" /></svg></a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Case study: Fraud detection -->
+  <dialog class="modal" id="case-fraud" aria-labelledby="case-fraud-title">
+    <div class="modal-inner">
+      <button class="modal-close icon-btn" type="button" data-close aria-label="Close"><svg class="i"><use href="#i-x" /></svg></button>
+      <p class="modal-kicker">Case study</p>
+      <h2 class="modal-title" id="case-fraud-title">Payment Fraud Detection Pipeline</h2>
+      <ul class="modal-meta">
+        <li>Personal project</li>
+        <li>2026</li>
+        <li>XGBoost · LightGBM · SHAP · MLflow · ONNX</li>
+      </ul>
+
+      <h3>The problem</h3>
+      <p>Card fraud is rare (3.5% of the 590K IEEE-CIS transactions) and has to be caught in milliseconds. The goal is a
+        production-shaped system, not a notebook model.</p>
+
+      <h3>What's built</h3>
+      <ul class="modal-list">
+        <li><strong>Feature pipeline:</strong> merges transaction and identity tables, drops columns more than 90%
+          missing, derives time-of-day and day-of-week, normalizes email domains, writes Parquet.</li>
+        <li><strong>Models:</strong> XGBoost and LightGBM with class weighting, plus a weighted ensemble; F1-optimal
+          thresholds saved for serving.</li>
+        <li><strong>MLOps:</strong> every run logged to MLflow with versioned models and a Staging alias; models exported
+          to ONNX for fast CPU inference.</li>
+      </ul>
+
+      <h3>Catching the leak</h3>
+      <p>The first results showed <strong>AUC 0.96–0.97</strong>, above what heavily tuned winning Kaggle solutions reach
+        on this dataset (~0.945–0.96), so I treated it as a red flag rather than a win. Two leaks were inflating it:</p>
+      <ul class="modal-list">
+        <li><strong>Random split on time-ordered data.</strong> Shuffling before splitting let the model train on future
+          transactions and validate on past ones. Fixed with a chronological split: oldest 80% to train, most recent 20%
+          to validate.</li>
+        <li><strong>Imputation leakage.</strong> Missing values were filled with medians computed on the full dataset,
+          including validation rows. Fixed by fitting the imputer on the training set only.</li>
+      </ul>
+      <p>The honest result: <strong>AUC 0.91</strong> (ensemble 0.912), about 0.05 lower, which is exactly the leakage
+        that had been inflating it.</p>
+
+      <h3>The early-stopping bug</h3>
+      <p>LightGBM's first run stopped after a single boosting round. With no metric set, early stopping watched log-loss,
+        which gets worse on an imbalanced validation set as fraud is up-weighted, even while ranking quality is still
+        improving. Switching to <code>scale_pos_weight</code> (matching XGBoost) and AUC as the stopping metric let it
+        train fully.</p>
+
+      <h3>Results (chronological holdout, most recent 20%)</h3>
+      <table class="modal-table">
+        <thead>
+          <tr><th scope="col">Model</th><th scope="col" class="num">AUC</th><th scope="col" class="num">PR-AUC</th><th scope="col" class="num">F1</th><th scope="col" class="num">Precision</th><th scope="col" class="num">Recall</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">XGBoost</th><td class="num">0.910</td><td class="num">0.524</td><td class="num">0.503</td><td class="num">0.568</td><td class="num">0.452</td></tr>
+          <tr><th scope="row">LightGBM</th><td class="num">0.908</td><td class="num">0.518</td><td class="num">0.504</td><td class="num">0.632</td><td class="num">0.420</td></tr>
+          <tr class="is-ours"><th scope="row">Ensemble</th><td class="num">0.912</td><td class="num">0.526</td><td class="num">0.503</td><td class="num">0.678</td><td class="num">0.400</td></tr>
+        </tbody>
+      </table>
+
+      <div class="modal-actions">
+        <a class="btn btn-dark btn-sm" href="https://github.com/scarletthejiaqi/Fraud-detection-pipeline" target="_blank"
+          rel="noopener" data-track="code_fraud_modal"><svg class="i" aria-hidden="true"><use href="#i-github" /></svg> View the code</a>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.halo.min.js"></script>
+  <script defer src="script.js"></script>
 </body>
 
 </html>
