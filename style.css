@@ -622,26 +622,11 @@ kbd {
   min-height: 1.7em;
 }
 
-.typed {
+.hero-typed .hl {
   font-weight: 600;
   color: var(--accent-ink);
   background: linear-gradient(transparent 62%, rgba(138, 43, 226, 0.16) 62%);
-}
-
-.caret {
-  display: inline-block;
-  width: 2px;
-  height: 1.1em;
-  margin-left: 2px;
-  vertical-align: -0.17em;
-  background: var(--accent);
-  animation: blink 1s steps(1) infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
+  white-space: nowrap;
 }
 
 .hero-cta {
@@ -1535,30 +1520,6 @@ kbd {
   background: #fff;
   border: 1px solid var(--line);
   box-shadow: var(--shadow-sm);
-  animation: step-glow 6s var(--ease) infinite;
-}
-
-.pipe-forecast .pipe-icon {
-  animation-delay: 2s;
-}
-
-.pipe-verify .pipe-icon {
-  animation-delay: 4s;
-}
-
-@keyframes step-glow {
-
-  0%,
-  28% {
-    transform: translateY(-4px);
-    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.28), var(--shadow);
-  }
-
-  36%,
-  100% {
-    transform: none;
-    box-shadow: var(--shadow-sm);
-  }
 }
 
 .doc i {
@@ -1578,21 +1539,9 @@ kbd {
   content: "";
   position: absolute;
   inset: 0 auto 0 0;
-  width: 0;
+  width: 100%;
   border-radius: 3px;
   background: rgba(138, 43, 226, 0.65);
-  animation: highlight 6s var(--ease) infinite;
-}
-
-@keyframes highlight {
-  0% {
-    width: 0;
-  }
-
-  22%,
-  100% {
-    width: 100%;
-  }
 }
 
 .iv-line {
@@ -1611,27 +1560,11 @@ kbd {
   position: absolute;
   top: -6px;
   height: 14px;
-  left: 14%;
-  right: 14%;
+  left: 30%;
+  right: 22%;
   border-radius: 7px;
   background: rgba(138, 43, 226, 0.2);
   border: 1.5px solid rgba(138, 43, 226, 0.6);
-  animation: interval 6s var(--ease) infinite;
-}
-
-@keyframes interval {
-
-  0%,
-  33% {
-    left: 10%;
-    right: 10%;
-  }
-
-  50%,
-  100% {
-    left: 30%;
-    right: 22%;
-  }
 }
 
 .iv-point {
@@ -1669,29 +1602,11 @@ kbd {
   color: #fff;
   background: var(--good);
   box-shadow: 0 0 0 3px #fff;
-  animation: pop 6s var(--ease) infinite;
 }
 
 .claim-check .i {
   width: 15px;
   height: 15px;
-}
-
-@keyframes pop {
-
-  0%,
-  66% {
-    transform: scale(0);
-  }
-
-  72% {
-    transform: scale(1.15);
-  }
-
-  77%,
-  100% {
-    transform: scale(1);
-  }
 }
 
 .pipe-link {
@@ -2335,6 +2250,10 @@ kbd {
   color: var(--muted);
 }
 
+.leader-role:has(+ .leader-role) {
+  margin-bottom: 0;
+}
+
 .leadership .bullets li {
   font-size: 0.92rem;
 }
@@ -2923,9 +2842,6 @@ dialog::backdrop {
     transform: none;
   }
 
-  .caret {
-    display: none;
-  }
 }
 
 /* Lock page scroll while a dialog is open */

@@ -143,13 +143,9 @@
           <h1 class="hero-name reveal" style="--d:120ms">Scarlett He</h1>
           <p class="hero-role reveal" style="--d:180ms">Data Scientist &amp; Quant Researcher</p>
           <p class="hero-meta reveal" style="--d:220ms"><span>Statistics @ UChicago ·</span> <span>Graduating Dec 2026</span></p>
-          <p class="hero-typed reveal" style="--d:260ms">
-            <span class="sr-only">I build probabilistic forecasts, LLM agents, ML pipelines, fraud-detection models and
-              dashboards for decision-makers.</span>
-            <span aria-hidden="true">I build <span class="typed"
-                data-words='["probabilistic forecasts","LLM agents","ML pipelines","fraud-detection models","dashboards for decision-makers"]'>probabilistic
-                forecasts</span><span class="caret"></span></span>
-          </p>
+          <p class="hero-typed reveal" style="--d:260ms">I build <span class="hl">probabilistic forecasts</span>,
+            <span class="hl">LLM agents</span>, <span class="hl">ML pipelines</span>, <span class="hl">fraud-detection
+              models</span> and <span class="hl">dashboards for decision-makers</span>.</p>
           <div class="hero-cta reveal" style="--d:300ms">
             <a class="btn btn-dark" href="https://drive.google.com/file/d/1ZShLhfZJZL_-_Fawm_cjPgQS27HY20Ds/view?usp=sharing"
               target="_blank" rel="noopener" data-track="resume_hero">
@@ -179,7 +175,7 @@
           <h2 class="edu-title">Education</h2>
           <div class="school">
             <p class="school-name">University of Chicago</p>
-            <p>B.S. Statistics <span class="nowrap"><span class="sep">·</span> GPA 3.71</span></p>
+            <p>B.S. Statistics <span class="nowrap"><span class="sep">·</span> GPA 3.66</span></p>
             <p class="muted">Sep 2024 – Dec 2026</p>
           </div>
           <div class="school">
@@ -210,20 +206,20 @@
 
       <ul class="stats" aria-label="Highlights">
         <li class="stat card reveal">
-          <span class="stat-value"><span data-count data-from="87" data-to="1" data-prefix="#">#1</span><span
+          <span class="stat-value"><span>#1</span><span
               class="stat-of">/ 87</span></span>
           <span class="stat-label">NeurIPS 2026 Agenthon, forecasting track</span>
         </li>
         <li class="stat card reveal" style="--d:80ms">
-          <span class="stat-value"><span data-count data-to="5">5</span></span>
+          <span class="stat-value"><span>5</span></span>
           <span class="stat-label">industry &amp; research roles</span>
         </li>
         <li class="stat card reveal" style="--d:160ms">
-          <span class="stat-value"><span data-count data-to="30">30</span>×</span>
+          <span class="stat-value"><span>30</span>×</span>
           <span class="stat-label">faster document pipeline at Bank of America</span>
         </li>
         <li class="stat card reveal" style="--d:240ms">
-          <span class="stat-value"><span data-count data-to="3.98" data-decimals="2">3.98</span></span>
+          <span class="stat-value"><span>3.98</span></span>
           <span class="stat-label">GPA at UIUC, Statistics &amp; CS</span>
         </li>
       </ul>
@@ -603,13 +599,12 @@
             </div>
             <div class="feature-body">
               <div class="badges">
-                <span class="rank rank-live"><span class="pulse" aria-hidden="true"></span> In progress</span>
                 <span class="tag">Production ML</span>
               </div>
               <h3 class="feature-title">Real-Time Fraud Detection Pipeline</h3>
               <p class="feature-sub">Personal project · 590K card transactions (IEEE-CIS), 3.5% fraud</p>
               <p class="feature-desc">A production-style fraud system, not a notebook: a gradient-boosted ensemble, MLflow
-                model registry and ONNX export for fast CPU inference, with a Kafka + Redis streaming layer in progress.</p>
+                model registry, ONNX export for fast CPU inference, and Docker Compose infrastructure for Kafka + Redis.</p>
               <ul class="points">
                 <li>Traced LightGBM stopping after one tree to log-loss early stopping under class imbalance; AUC +
                   <code>scale_pos_weight</code> lifted <strong>AUC 0.866 → 0.969</strong></li>
@@ -966,6 +961,7 @@
             <p class="leader-kicker">Leadership</p>
             <h3 class="leader-title"><span aria-hidden="true">🏓</span> UChicago Table Tennis Club</h3>
             <p class="leader-role">Vice President &amp; Treasurer · May 2025 – present</p>
+            <p class="leader-role">Team Leader, Women's NCTTA Team</p>
             <ul class="bullets">
               <li>Grew membership <strong>30% year over year</strong> by running the club's social media</li>
               <li>Led fundraising that raised <strong>$2,000+</strong> for events and NCTTA competitions</li>
@@ -1159,7 +1155,7 @@
   <dialog class="modal" id="case-fraud" aria-labelledby="case-fraud-title">
     <div class="modal-inner">
       <button class="modal-close icon-btn" type="button" data-close aria-label="Close"><svg class="i"><use href="#i-x" /></svg></button>
-      <p class="modal-kicker">Case study · in progress</p>
+      <p class="modal-kicker">Case study</p>
       <h2 class="modal-title" id="case-fraud-title">Real-Time Fraud Detection Pipeline</h2>
       <ul class="modal-meta">
         <li>Personal project</li>
@@ -1200,10 +1196,6 @@
           <tr><th scope="row">Ensemble</th><td class="num">0.967</td><td class="num">0.796</td><td class="num">0.750</td><td class="num">0.840</td><td class="num">0.678</td></tr>
         </tbody>
       </table>
-
-      <h3>Next</h3>
-      <p>Kafka producer and Redis feature store, a FastAPI ONNX inference service that returns per-model sub-scores, Locust
-        load tests (p50/p95/p99 latency) and a Streamlit monitoring dashboard.</p>
 
       <div class="modal-actions">
         <a class="btn btn-dark btn-sm" href="https://github.com/scarletthejiaqi/Fraud-detection-pipeline" target="_blank"

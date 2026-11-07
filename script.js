@@ -201,69 +201,6 @@
     revealEls.forEach((n) => n.classList.add('is-in'));
   }
 
-  /* ---------- Count-up stats ---------- */
-  function countUp(node) {
-    const to = parseFloat(node.dataset.to);
-    const from = parseFloat(node.dataset.from || '0');
-    const dec = parseInt(node.dataset.decimals || '0', 10);
-    const prefix = node.dataset.prefix || '';
-    const fmt = (v) => prefix + v.toFixed(dec);
-    if (reduceMotion) { node.textContent = fmt(to); return; }
-    const dur = 1400;
-    const t0 = performance.now();
-    const step = (now) => {
-      const t = Math.min(1, (now - t0) / dur);
-      const eased = 1 - Math.pow(1 - t, 3);
-      node.textContent = fmt(from + (to - from) * eased);
-      if (t < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  }
-  const counters = $$('[data-count]');
-  if ('IntersectionObserver' in window) {
-    const cio = new IntersectionObserver((entries) => {
-      entries.forEach((en) => {
-        if (en.isIntersecting) {
-          countUp(en.target);
-          cio.unobserve(en.target);
-        }
-      });
-    }, { threshold: 0.6 });
-    counters.forEach((c) => cio.observe(c));
-  }
-
-  /* ---------- Typed role line ---------- */
-  const typedEl = $('.typed');
-  if (typedEl && !reduceMotion) {
-    const words = JSON.parse(typedEl.dataset.words);
-    let wi = 0;
-    let ci = words[0].length;
-    let deleting = true;
-    typedEl.textContent = words[0];
-    const tick = () => {
-      const w = words[wi];
-      if (deleting) {
-        if (ci > 0) {
-          ci -= 1;
-          typedEl.textContent = w.slice(0, ci);
-          setTimeout(tick, 26);
-        } else {
-          deleting = false;
-          wi = (wi + 1) % words.length;
-          setTimeout(tick, 260);
-        }
-      } else if (ci < words[wi].length) {
-        ci += 1;
-        typedEl.textContent = words[wi].slice(0, ci);
-        setTimeout(tick, 50 + Math.random() * 45);
-      } else {
-        deleting = true;
-        setTimeout(tick, 1900);
-      }
-    };
-    setTimeout(tick, 2400);
-  }
-
   /* ---------- Portrait tilt + card spotlight (mouse only) ---------- */
   const tilt = $('[data-tilt]');
   const hero = $('.hero');
